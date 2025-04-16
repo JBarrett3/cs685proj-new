@@ -1,157 +1,196 @@
-import os
-import json
-import random
+from unsloth import FastLanguageModel
 import torch
-from unsloth import FastLanguageModel, Trainer  # Unsloth's fast fine-tuning API
 from transformers import AutoTokenizer
-import numpy as np
+from trl import GRPOConfig, GRPOTrainer
+import json, random, re
+from datasets import Dataset
 
-# -------------------------------------------------
-# 1. Data Loading and Preprocessing
-# -------------------------------------------------
-def load_puzzle_data(json_file):
-    """Load puzzles from a JSON file that contains an array of puzzle objects."""
-    with open(json_file, "r") as f:
-        data = json.load(f)
-    return data
 
-def create_grpo_example(puzzle):
-    """
-    Convert a puzzle JSON into an input-output pair for GRPO.
-    
-    The input includes:
-      - A prompt with puzzle metadata (date, index, words)
-      - A directive to provide an answer
-    
-    The target (reward signal) is indirectly derived from the gold-standard grouping.
-    Here, we format the reward text (or score) as a string that the model must reproduce.
-    """
+max_seq_length = 1024     # Maximum sequence length for reasoning traces
+lora_rank = 32            # Chosen LoRA rank
+
+model, tokenizer = FastLanguageModel.from_pretrained(
+    #model_name = "meta-llama/meta-Llama-3.1-8B-Instruct",
+    model_name = "/datasets/ai/llama3/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+    max_seq_length = max_seq_length,
+    load_in_4bit = True,
+    fast_inference = True,
+    max_lora_rank = lora_rank,
+    gpu_memory_utilization = 0.6,
+)
+
+model = FastLanguageModel.get_peft_model(
+    model,
+    r = lora_rank,
+    target_modules = [
+        "q_proj", "k_proj", "v_proj", "o_proj",
+        "gate_proj", "up_proj", "down_proj"
+    ],
+    lora_alpha = lora_rank,
+    use_gradient_checkpointing = "unsloth",  # Enable long context finetuning
+    random_state = 3407,
+)
+
+# Data prep
+def convert_puzzle_to_example(puzzle):
     date = puzzle.get("date", "")
     index = puzzle.get("puzzle_index", "unknown")
-    words = puzzle.get("allwords", [])
+    allwords = puzzle.get("allwords", [])
     annotations = puzzle.get("reasoning_annotation", [])
-
-    prompt = f"Puzzle (Date: {date}, Index: {index}):\n" + ", ".join(words) + "\nAnswer:"
     
-    # For GRPO, we want to compute a reward signal.
-    # In this simplified version, we'll convert the annotations into a target string.
-    reward_lines = []
+    prompt = f"Puzzle (Date: {date}, Index: {index}):\n" + ", ".join(allwords) + "\nAnswer:"
+    
+    reasoning_lines = []
     for ann in annotations:
         category = ann.get("Categories", "Unknown Category")
-        complexity = ann.get("Complexity", "?")
-        cat_words = ann.get("Words in Category", [])
-        line = f"{category} (Complexity {complexity}): " + ", ".join(cat_words)
-        reward_lines.append(line)
-    target_reward = " ".join(reward_lines)
+        complexity = ann.get("Complexity", 1)
+        words_in_cat = ann.get("Words in Category", [])
+        line = f"{category} (Complexity {complexity}): " + ", ".join(words_in_cat)
+        reasoning_lines.append(line)
+    reasoning_str = "\n".join(reasoning_lines)
     
-    # For GRPO we may also include a scalar reward.
-    # Here, we compute a dummy reward: lower total complexity means a higher reward.
-    total_complexity = sum(ann.get("Complexity", 1) for ann in annotations)
-    # We'll define reward = 10 / (total_complexity) as a simple example.
-    reward_value = 10.0 / (total_complexity if total_complexity > 0 else 1)
-    
-    return {"input": prompt, "target_text": target_reward, "reward": reward_value}
+    answer = f"<reasoning>\n{reasoning_str}\n</reasoning>\n<answer>\n{reasoning_str}\n</answer>\n"
+    return {"prompt": prompt, "answer": answer}
 
-def build_grpo_dataset(json_file, output_filename="grpo_training_data.jsonl"):
-    puzzles = load_puzzle_data(json_file)
-    examples = [create_grpo_example(puzzle) for puzzle in puzzles]
-    with open(output_filename, "w") as f:
-        for ex in examples:
-            json.dump(ex, f)
-            f.write("\n")
-    print(f"Saved {len(examples)} GRPO training examples to {output_filename}")
-    return examples
+DATA_FILE = "data/puzzles.json"
+with open(DATA_FILE, "r") as f:
+    puzzle_data = json.load(f)
 
-# -------------------------------------------------
-# 2. GRPO Training Setup with Unsloth
-# -------------------------------------------------
-# File paths
-DATA_FILE = "data/puzzles.json"  # your JSON file with puzzles
-TRAINING_DATA_FILE = "grpo_training_data.jsonl"
-OUTPUT_DIR = "results/grpo_fine_tuned_model"
+training_examples = [convert_puzzle_to_example(p) for p in puzzle_data]
+print(f"Converted {len(training_examples)} puzzles to training examples.")
+train_dataset = Dataset.from_list(training_examples)
 
-# Build the GRPO training dataset
-_ = build_grpo_dataset(DATA_FILE, TRAINING_DATA_FILE)
+# Reward
+def extract_xml_answer(text: str) -> str:
+    """Extract text between <answer> and </answer> tags."""
+    try:
+        answer = text.split("<answer>")[-1].split("</answer>")[0]
+        return answer.strip()
+    except Exception:
+        return ""
 
-# Set your base model ID
-MODEL_ID = "meta-llama/Meta-Llama-3-8B-Instruct"
+def get_completion_content(completion):
+    """
+    Helper to extract the content string from a completion.
+    If completion is a list of dicts, returns the content of the first item.
+    If it's a dict, returns the value for 'content'.
+    If it's already a string, returns it.
+    """
+    if isinstance(completion, list):
+        if len(completion) > 0 and isinstance(completion[0], dict):
+            return completion[0].get("content", "")
+        else:
+            return str(completion)
+    elif isinstance(completion, dict):
+        return completion.get("content", "")
+    elif isinstance(completion, str):
+        return completion
+    else:
+        return str(completion)
 
-# Initialize the base model using Unsloth with quantization
-model = FastLanguageModel.from_pretrained(
-    MODEL_ID,
-    load_in_4bit=True,   # Use 4-bit quantization for efficiency
-    device_map="auto"
+def xmlcount_reward_func(completions, **kwargs) -> list[float]:
+    """Reward based on count of expected XML tags."""
+    def count_xml(text: str) -> float:
+        count = 0.0
+        if text.count("<reasoning>\n") == 1:
+            count += 0.125
+        if text.count("\n</reasoning>\n") == 1:
+            count += 0.125
+        if text.count("\n<answer>\n") == 1:
+            count += 0.125
+        if text.count("\n</answer>") == 1:
+            count += 0.125
+        return count
+    contents = [get_completion_content(comp) for comp in completions]
+    return [count_xml(c) for c in contents]
+
+def strict_format_reward_func(completions, **kwargs) -> list[float]:
+    """Checks if completion exactly matches the expected XML format."""
+    pattern = r"^<reasoning>\n.*?\n</reasoning>\n<answer>\n.*?\n</answer>\n$"
+    responses = [get_completion_content(comp) for comp in completions]
+    return [0.5 if re.match(pattern, r) else 0.0 for r in responses]
+
+def soft_format_reward_func(completions, **kwargs) -> list[float]:
+    """Checks if completion contains the expected XML structure."""
+    pattern = r"<reasoning>.*?</reasoning>\s*<answer>.*?</answer>"
+    responses = [get_completion_content(comp) for comp in completions]
+    return [0.5 if re.search(pattern, r) else 0.0 for r in responses]
+
+def int_reward_func(completions, **kwargs) -> list[float]:
+    """Dummy reward if the extracted answer is a number."""
+    responses = [get_completion_content(comp) for comp in completions]
+    extracted = [extract_xml_answer(r) for r in responses]
+    return [0.5 if r.isdigit() else 0.0 for r in extracted]
+
+def correctness_reward_func(prompts, completions, answer, **kwargs) -> list[float]:
+    """Dummy correctness reward comparing the extracted answer with the target answer."""
+    responses = [get_completion_content(comp) for comp in completions]
+    extracted = [extract_xml_answer(r) for r in responses]
+    return [2.0 if r.strip() == a.strip() else 0.0 for r, a in zip(extracted, answer)]
+
+# GRPO
+max_prompt_length = 256
+
+training_args = GRPOConfig(
+    learning_rate = 5e-6,
+    adam_beta1 = 0.9,
+    adam_beta2 = 0.99,
+    weight_decay = 0.1,
+    warmup_ratio = 0.1,
+    lr_scheduler_type = "cosine",
+    optim = "paged_adamw_8bit",
+    logging_steps = 1,
+    per_device_train_batch_size = 1,
+    gradient_accumulation_steps = 1,  # Increase to smooth gradients if needed
+    num_generations = 6,             # Number of generations per rollout
+    max_prompt_length = max_prompt_length,
+    max_completion_length = max_seq_length - max_prompt_length,
+    max_steps = 250,
+    save_steps = 250,
+    max_grad_norm = 0.1,
+    report_to = "none",              # Change to "wandb" for W&B reporting
+    output_dir = "outputs",
 )
-tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 
-# Load GRPO training examples from JSONL
-def load_jsonl(file_path):
-    examples = []
-    with open(file_path, "r") as f:
-        for line in f:
-            if line.strip():
-                examples.append(json.loads(line))
-    return examples
-
-raw_train_data = load_jsonl(TRAINING_DATA_FILE)
-
-# Preprocess the data: combine prompt and target text.
-# For GRPO we use the combined string as the training text.
-def preprocess_grpo(example):
-    # We include both the prompt and the expected target text.
-    training_text = f"{example['input']}\nExpected: {example['target_text']}"
-    # We also attach the reward value as metadata for later use in policy optimization.
-    return {"text": training_text, "reward": example["reward"]}
-
-train_dataset = [preprocess_grpo(ex) for ex in raw_train_data]
-
-# Define a simple reward function.
-# In a real GRPO setup, you would compute a reward based on how close the model's output is to target.
-# Here, we simply use the provided reward value.
-def reward_function(generated_text, target_text):
-    # For demonstration, reward is negative absolute difference in length between generated and target.
-    # More sophisticated methods (e.g. semantic similarity) can be used.
-    return -abs(len(generated_text) - len(target_text))
-
-# Define GRPO training hyperparameters (modify as needed)
-training_args = {
-    "num_train_epochs": 3,
-    "per_device_train_batch_size": 4,
-    "learning_rate": 2e-5,
-    "logging_steps": 10,
-    "output_dir": OUTPUT_DIR,
-    # Additional GRPO-specific settings could be added here, such as reward scaling factors.
-}
-
-# Create a custom Trainer that can integrate the reward function.
-# This is a simplified version that uses the provided training data.
-class GRPOTrainer(Trainer):
-    def compute_loss(self, model, inputs, return_outputs=False):
-        # Standard cross-entropy loss from base Trainer.
-        outputs = model(**inputs)
-        loss = outputs.loss
-
-        # Here, you would normally modify the loss by incorporating the reward signal.
-        # For example, if the generated output (from `model.generate`) is available,
-        # you could compute a policy gradient loss. This example adds a dummy reward term.
-        # (In practice, you would perform a rollout, compute reward, and add a reinforcement learning loss.)
-        dummy_reward = torch.tensor(0.0, device=loss.device)
-        if "reward" in inputs:
-            dummy_reward = inputs["reward"].float().mean() * 0.01  # scale reward term
-        total_loss = loss - dummy_reward  # subtract reward to maximize it
-        if return_outputs:
-            return total_loss, outputs
-        return total_loss
-
-# Initialize our GRPO trainer.
-grpo_trainer = GRPOTrainer(
-    model=model,
-    tokenizer=tokenizer,
-    train_dataset=train_dataset,
-    args=training_args
+# Training
+trainer = GRPOTrainer(
+    model = model,
+    processing_class = tokenizer,
+    reward_funcs = [
+        xmlcount_reward_func,
+        soft_format_reward_func,
+        strict_format_reward_func,
+        int_reward_func,
+        correctness_reward_func,
+    ],
+    args = training_args,
+    train_dataset = train_dataset,
 )
 
 print("Starting GRPO fine-tuning...")
-grpo_trainer.train()
-grpo_trainer.save_model(OUTPUT_DIR)
-print(f"GRPO fine-tuned model saved in {OUTPUT_DIR}")
+trainer.train()
+trainer.save_model(training_args.output_dir)
+print(f"GRPO fine-tuned model saved in {training_args.output_dir}")
+
+# Inference
+from vllm import SamplingParams
+
+sample = random.choice(puzzle_data)
+inference_prompt = f"Puzzle (Date: {sample['date']}, Index: {sample['puzzle_index']}):\n" + ", ".join(sample["allwords"]) + "\nAnswer:"
+
+sampling_params = SamplingParams(
+    temperature = 0.8,
+    top_p = 0.95,
+    max_tokens = 1024,
+)
+
+generated_output = model.fast_generate(
+    [inference_prompt],
+    sampling_params = sampling_params,
+    lora_request = None,
+)[0].outputs[0].text
+
+print("Inference prompt:")
+print(inference_prompt)
+print("\nGenerated Completion:")
+print(generated_output)
