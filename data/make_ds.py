@@ -60,7 +60,7 @@ def format_target(groupings):
         lines.append(f"{category.upper()}: {words}")
     return "\n".join(lines)
 
-def make_ds(file, save_to_disk=False):
+def make_ds(file, save_to_disk=True):
     with open(file, "r") as f:
         puzzles = json.load(f) 
     data_examples = []
