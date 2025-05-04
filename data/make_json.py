@@ -44,7 +44,7 @@ def parse_file(input_file):
 def main():
     random.seed(123)
     in_file = "raw.txt"
-    out_file = "primary_dataset.json"
+    out_file = "output2.json"
 
     puzzles = parse_file(in_file)
     
