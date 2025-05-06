@@ -25,7 +25,7 @@ print("INFO: GPU Count:", torch.cuda.device_count())
 # arg parse
 parser = argparse.ArgumentParser(description="Model training script")
 parser.add_argument("--training", action="store_true", help="Flag to train the model (default: just evaluation)")
-parser.add_argument("--limit", type=int, default=1000, help="Limit on number of samples")
+parser.add_argument("--limit", type=int, default=-1, help="Limit on number of samples")
 parser.add_argument("--epochs", type=int, default=10, help="Number of training epochs")
 parser.add_argument("--batch_size", type=int, default=10, help="Batch size for training")
 parser.add_argument("--lr", type=float, default=1e-3, help="Learning rate")
