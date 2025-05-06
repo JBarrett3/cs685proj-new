@@ -3,7 +3,7 @@
 #SBATCH --mem=20GB
 #SBATCH -p gpu
 #SBATCH --gres=gpu:m40:1 # specifies for 24GB
-#SBATCH -t 12:00:00
+#SBATCH -t 48:00:00
 #SBATCH -o /home/jamesbarrett_umass_edu/cs685proj-new/conventional/slurm_logs/logs-%j.out
 
 module load conda/latest
