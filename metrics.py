@@ -6,12 +6,14 @@ import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 import torch
+from matplotlib.patches import Rectangle
 
 # Heat map of the cosine similarity matrix. Ideally groups should have high similarity. 
 def plot_similarity_heatmap(word_grid, sim_matrix):
     words = word_grid.flatten()
     plt.figure(figsize=(10, 8))
-    sns.heatmap(
+
+    ax = sns.heatmap(
         sim_matrix,
         xticklabels=words,
         yticklabels=words,
@@ -21,23 +23,44 @@ def plot_similarity_heatmap(word_grid, sim_matrix):
         fmt=".2f",
         cbar_kws={"label": "Cosine Similarity"}
     )
-    plt.title("Pairwise Cosine Similarity of Word Embeddings")
+
+    # Draw colored rectangles around intra-group 4x4 blocks
+    group_colors = ['red', 'green', 'blue', 'orange']
+    for i, color in enumerate(group_colors):
+        start = i * 4
+        rect = Rectangle((start, start), 4, 4, fill=False, edgecolor=color, linewidth=2)
+        ax.add_patch(rect)
+
+    plt.title("Pairwise Cosine Similarity of Word Embeddings", fontsize=14)
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
-
+    
 def avg_plot_similarity_heatmap(sim_matrix):
-    words = word_grid.flatten()
+    """
+    Plots an average 16x16 similarity matrix with color-coded rectangles for group blocks.
+    Assumes 4 groups of 4 items each.
+    """
     plt.figure(figsize=(10, 8))
-    sns.heatmap(
+    ax = sns.heatmap(
         sim_matrix,
         cmap="BuPu",
         square=True,
-        annot=False,
+        annot=True,
         fmt=".2f",
-        cbar_kws={"label": "Cosine Similarity"}
+        cbar_kws={"label": "Cosine Similarity"},
+        xticklabels=False,
+        yticklabels=False
     )
-    plt.title("Average Pairwise Cosine Similarity of Word Embeddings")
+
+    # Draw color-coded rectangles around each 4x4 intra-group block
+    group_colors = ['red', 'green', 'blue', 'orange']
+    for i, color in enumerate(group_colors):
+        start = i * 4
+        rect = Rectangle((start, start), 4, 4, fill=False, edgecolor=color, linewidth=2)
+        ax.add_patch(rect)
+
+    plt.title("Average Pairwise Cosine Similarity of Word Embeddings (Grouped Blocks)", fontsize=14)
     plt.tight_layout()
     plt.show()
 
