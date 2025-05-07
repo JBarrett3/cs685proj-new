@@ -8,7 +8,7 @@ import sys
 import json
 import math
 import matplotlib.pyplot as plt
-from metrics import compute_group_metrics
+from script_embed_metrics import compute_group_metrics
 import gc
 import numpy as np
 import torch
