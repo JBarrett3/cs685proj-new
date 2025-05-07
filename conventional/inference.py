@@ -1,6 +1,6 @@
 # args
-MODEL_PATH = f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/checkpoints/tuned/checkpoint-80"
-OUT_PATH = f'/home/jamesbarrett_umass_edu/cs685proj-new/conventional/inferences/tuned.json'
+MODEL_PATH = f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/best_model/checkpoints/checkpoint-48"
+OUT_PATH = f'/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/best_model/inferences.json'
 
 # imports
 import json
@@ -19,7 +19,7 @@ max_seq_length = 1256 # prompts are ~1000, so leaving 256 for response
 dtype = None
 load_in_4bit = True
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = MODEL_PATH, 
+    model_name =  "unsloth/Llama-3.1-8B-Instruct", 
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit
