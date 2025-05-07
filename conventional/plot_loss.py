@@ -1,6 +1,6 @@
 # args
-LOGPATH = "/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/100exampleGridSearch/checkpoints/20250504-133812/checkpoint-20/trainer_state.json"
-OUT_PATH = f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/100exampleGridSearch/loss_plots/20250504-133812.png"
+LOGPATH = "/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/100exampleGridSearch/checkpoints/20250504-133501/checkpoint-20/trainer_state.json"
+OUT_PATH = f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/100exampleGridSearch/loss_plots/20250504-133501.png"
 
 # imports
 import matplotlib.pyplot as plt
@@ -31,7 +31,7 @@ plt.figure(figsize=(10, 6))
 plt.plot(np.arange(len(train_losses)), train_losses, label="Training Loss", color="red", marker='o')
 plt.plot(np.arange(len(eval_losses)), eval_losses, label="Validation Loss", color="green", marker='o')
 plt.xlabel("Epochs")
-plt.ylabel("Log Loss")
+plt.ylabel("Loss")
 plt.title("Training and Validation Loss")
 plt.legend()
 plt.grid(True)

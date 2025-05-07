@@ -8,8 +8,9 @@ import sys
 import json
 import math
 import matplotlib.pyplot as plt
-from embed_metrics import getAvgEmbedMetric
+from metrics import compute_group_metrics
 import gc
+import numpy as np
 import torch
 
 # set paths for inputs and outputs
@@ -21,7 +22,8 @@ embed_plot_path = f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/resu
 with open(unshuffled_dataset_path, 'r') as file:
     data = json.load(file)
 rawWordLists = [item['allwords'] for item in data]
-testWordLists = rawWordLists[math.ceil(len(rawWordLists)*0.9):]
+testWordLists = np.array(rawWordLists[math.ceil(len(rawWordLists)*0.9):]) # (N, 1, 16)
+testWordLists = np.array(testWordLists).reshape((len(testWordLists), 4, 4)) # (N, 4, 4)
 print("dataset loaded")
 
 # get values for grp sim
@@ -37,12 +39,14 @@ for ckpt_end_path in os.listdir(ckpt_dir_path):
             dtype = None,
             load_in_4bit = True, 
         )
-        return getAvgEmbedMetric(testWordLists[:3], model, tokenizer, pth)
+        os.makedirs(f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/best_model/embedMetrics/{pth}", exist_ok=True)
+        results = compute_group_metrics(model, tokenizer, testWordLists, pth, plot=True)
+        return results['avg_intra_group_similarity'], results['avg_out_group_similarity']
     avgIntraGrpSim, avgExtraGrpSim = run_model(ckpt_end_path)
     avgIntraGrpSims.append(avgIntraGrpSim)
     avgExtraGrpSims.append(avgExtraGrpSim)
     epochs.append(epochNo)
-    print(f"calculated values for checkpoint {epochNo}")
+    print(f"calculated values for epoch {epochNo}")
     epochNo += 1
     gc.collect()
     torch.cuda.empty_cache()

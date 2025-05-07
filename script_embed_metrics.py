@@ -7,9 +7,10 @@ from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 import torch
 from matplotlib.patches import Rectangle
+from tqdm import tqdm
 
 # Heat map of the cosine similarity matrix. Ideally groups should have high similarity. 
-def plot_similarity_heatmap(word_grid, sim_matrix):
+def plot_similarity_heatmap(word_grid, sim_matrix, pth):
     words = word_grid.flatten()
     plt.figure(figsize=(10, 8))
 
@@ -34,9 +35,9 @@ def plot_similarity_heatmap(word_grid, sim_matrix):
     plt.title("Pairwise Cosine Similarity of Word Embeddings", fontsize=14)
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-    plt.show()
+    plt.savefig(f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/best_model/embedMetrics/{pth}/heatmap")
     
-def avg_plot_similarity_heatmap(sim_matrix):
+def avg_plot_similarity_heatmap(sim_matrix, pth):
     """
     Plots an average 16x16 similarity matrix with color-coded rectangles for group blocks.
     Assumes 4 groups of 4 items each.
@@ -62,11 +63,11 @@ def avg_plot_similarity_heatmap(sim_matrix):
 
     plt.title("Average Pairwise Cosine Similarity of Word Embeddings (Grouped Blocks)", fontsize=14)
     plt.tight_layout()
-    plt.show()
+    plt.savefig(f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/best_model/embedMetrics/{pth}/avgPairwiseCosSim")
 
 
 # Plots the embeddings on 2D after reducing the dimensionality. Ideally the groups should be close together, but in 2D hard to say.
-def plot_embeddings_2d(word_grid, embeddings, method='tsne'):
+def plot_embeddings_2d(word_grid, embeddings, pth, method='tsne'):
     words = word_grid.flatten()
     flat_embeddings = embeddings.reshape(-1, embeddings.shape[-1])
 
@@ -95,26 +96,26 @@ def plot_embeddings_2d(word_grid, embeddings, method='tsne'):
     plt.ylabel("Component 2")
     plt.grid(True)
     plt.tight_layout()
-    plt.show()
+    plt.savefig(f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/best_model/embedMetrics/{pth}/2Dembeds")
 
 # Compares the distribution of in group and out group similarities. Generally out group are much more spread out.
-def plot_similarity_distributions(intra_group_sims, out_group_sims):
+def plot_similarity_distributions(intra_group_sims, out_group_sims, pth):
     data = (
         [("Intra-group", sim) for sim in intra_group_sims] +
         [("Out-group", sim) for sim in out_group_sims]
     )
     labels, sims = zip(*data)
-    sns.violinplot(x=labels, y=sims, inner="box", palette="pastel")
+    sns.violinplot(x=labels, y=sims, inner="box", palette="pastel", hue=labels)
     plt.title("Distribution of Cosine Similarities")
     plt.ylabel("Cosine Similarity")
     plt.tight_layout()
-    plt.show()
+    plt.savefig(f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/results/best_model/embedMetrics/{pth}/avgSimDistribution")
 
 
 #call this with either string numpy array wordgrids of shape (n, 4, 4)
 # if n=1 it will output the groupings and all plots
 # if n>1 it will output the plots that make sense
-def compute_group_metrics(model, tokenizer, word_grids, plot=False):
+def compute_group_metrics(model, tokenizer, word_grids, pth, plot=False):
     # Ensure input is (n, 4, 4)
     if word_grids.ndim == 2:
         word_grids = word_grids[np.newaxis, :, :]
@@ -126,7 +127,7 @@ def compute_group_metrics(model, tokenizer, word_grids, plot=False):
     all_out_sims = []
     all_sim_matrices = []
 
-    for game_idx in range(num_games):
+    for game_idx in tqdm(range(num_games)):
         word_grid = word_grids[game_idx]
         embeddings = np.zeros((4, 4, hidden_size))
 
@@ -170,12 +171,12 @@ def compute_group_metrics(model, tokenizer, word_grids, plot=False):
     if plot:
         avg_sim_matrix = np.mean(np.array(all_sim_matrices), axis=0)
         if num_games == 1:
-            plot_embeddings_2d(word_grids[0], embeddings)
-            plot_similarity_heatmap(word_grids[0], avg_sim_matrix)
-            plot_similarity_distributions(avg_intra, all_out_sims.flatten())
+            plot_embeddings_2d(word_grids[0], embeddings, pth)
+            plot_similarity_heatmap(word_grids[0], avg_sim_matrix, pth)
+            plot_similarity_distributions(avg_intra, all_out_sims.flatten(), pth)
         else:
-            avg_plot_similarity_heatmap(avg_sim_matrix)
-            plot_similarity_distributions(avg_intra, all_out_sims.flatten())
+            avg_plot_similarity_heatmap(avg_sim_matrix, pth)
+            plot_similarity_distributions(avg_intra, all_out_sims.flatten(), pth)
 
     result = {
         "avg_intra_group_similarity": avg_intra.mean(),
