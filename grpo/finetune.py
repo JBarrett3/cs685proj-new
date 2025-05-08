@@ -207,7 +207,7 @@ def main():
         lr_scheduler_type = "cosine",
         optim = "paged_adamw_8bit",
         logging_steps = 1,
-        per_device_train_batch_size = 36,
+        per_device_train_batch_size = 1,
         gradient_accumulation_steps = 1, # Increase to 4 for smoother training
         num_generations = 6, # Decrease if out of memory
         max_prompt_length = max_prompt_length,
