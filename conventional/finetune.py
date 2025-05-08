@@ -25,17 +25,15 @@ print("INFO: GPU Count:", torch.cuda.device_count())
 # arg parse
 parser = argparse.ArgumentParser(description="Model training script")
 parser.add_argument("--training", action="store_true", help="Flag to train the model (default: just evaluation)")
-parser.add_argument("--limit", type=int, default=-1, help="Limit on number of samples")
-parser.add_argument("--epochs", type=int, default=10, help="Number of training epochs")
-parser.add_argument("--batch_size", type=int, default=10, help="Batch size for training")
+parser.add_argument("--epochs", type=int, default=5, help="Number of training epochs")
+parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
 parser.add_argument("--lr", type=float, default=1e-3, help="Learning rate")
 args = parser.parse_args()
 TRAINING = args.training
-LIMIT = args.limit
 EPOCHS = args.epochs
 BATCH_SIZE = args.batch_size
 LR = args.lr
-print(f"INFO: Training: {TRAINING}, Limit: {LIMIT}, Epochs: {EPOCHS}, Batch Size: {BATCH_SIZE}, Learning Rate: {LR}")
+print(f"INFO: Training: {TRAINING}, Epochs: {EPOCHS}, Batch Size: {BATCH_SIZE}, Learning Rate: {LR}")
 
 # model loading
 max_seq_length = 1256 # prompts are ~1000, so leaving 256 for response
@@ -84,9 +82,7 @@ print("INFO: QLora applied")
 dataset = load_from_disk("/home/jamesbarrett_umass_edu/cs685proj-new/data/connections_ds") # Note that you will need to run make_ds.py ahead of time to generate this dataset
 dataset = dataset.map(lambda example: {"text": example["input"]}, remove_columns=["input"])
 dataset = dataset.map(lambda example: {"label": example["target"]}, remove_columns=["target"])
-if LIMIT != -1:
-    dataset = dataset.select(range(0, LIMIT))
-train_test_split = dataset.train_test_split(test_size=0.1) # splits 10% off to test
+train_test_split = dataset.train_test_split(test_size=0.1, seed=42) # splits 10% off to test
 train_dataset = train_test_split['train']
 test_dataset = train_test_split['test']
 print(f"INFO: Loaded dataset of {len(dataset)} samples")
@@ -113,8 +109,8 @@ class ClearCacheCallback(TrainerCallback):
         return control
 training_args = TrainingArguments(
     per_device_train_batch_size = BATCH_SIZE,
-    per_device_eval_batch_size = 1, # really fast even with small batches, so might as well not risk it
-    gradient_accumulation_steps = 4,
+    per_device_eval_batch_size = BATCH_SIZE, # really fast even with small batches, so might as well not risk it
+    gradient_accumulation_steps = 1,
     warmup_steps = 5,
     num_train_epochs = EPOCHS,
     learning_rate = LR,
@@ -150,13 +146,19 @@ trainer = SFTTrainer(
 )
 print("INFO: Configured")
 
+# evaluate on test
+eval_result = trainer.evaluate()
+print("Test Loss:", eval_result["eval_loss"])
+
+# clear cache after training
+gc.collect()
+torch.cuda.empty_cache()
+torch.cuda.ipc_collect()
+
 # fine tune (if TRAINING)
 if TRAINING:
     trainer_stats = trainer.train()
     print("INFO: Trained model")
-    # output metrics
-    with open(f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/losses/{date}.json", "w") as f:
-        json.dump(trainer.state.log_history, f, indent=2)
 else:
     print("INFO: Bypassing training")
 
@@ -183,10 +185,8 @@ for input in tqdm(test_dataset['text']):
     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
     predictions.append({
         'input_sentence': input,
-        'whole prediction': generated_text,
-        'new token prediction': generated_text.split('Groupings:')[-1]
+        'whole prediction': generated_text
     })
-os.makedirs(f"/home/jamesbarrett_umass_edu/cs685proj-new/conventional/inferences/{date}/")
-with open(f'/home/jamesbarrett_umass_edu/cs685proj-new/conventional/inferences/{date}/trained={not TRAINING}.json', 'w') as json_file:
+with open(f'/home/jamesbarrett_umass_edu/cs685proj-new/conventional/inferences/{date}.json', 'w') as json_file:
     json.dump(predictions, json_file, indent=4)
 print("INFO: Inference complete")

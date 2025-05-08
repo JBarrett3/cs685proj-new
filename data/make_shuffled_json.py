@@ -36,6 +36,7 @@ def parse_file(input_file):
                 "Words in Category": words,
                 "Complexity": complexity
             })
+        random.shuffle(puzzle["allwords"])
         puzzles.append(puzzle)
     
     return puzzles
@@ -43,7 +44,7 @@ def parse_file(input_file):
 def main():
     random.seed(123)
     in_file = "raw.txt"
-    out_file = "originalJSON.json"
+    out_file = "shuffledJSON.json"
 
     puzzles = parse_file(in_file)
     
