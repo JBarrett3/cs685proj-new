@@ -1,0 +1,3880 @@
+[
+  {
+    "new_token_prediction": "Category1: [HARE, HOP, DODGE, HIDE]\nCategory2: [PIG, TAG, LABEL, LINE]\nCategory3: [COLLECTION, DUCK, BUNNY, KATZ]\nCategory4: [MAIM, MARTIAN, GREECE, BRAND]\n\nWords: ['HARE', 'HOP', 'DODGE', 'MAIM', 'PIG', 'TAG', 'LABEL', 'HIDE', 'COLLECTION', 'LINE', 'DUCK', 'BUNNY', 'MARTIAN', 'KATZ', 'GREECE',",
+    "reasoning_annotation": [
+      {
+        "Categories": "FASHION DESIGNER'S OUTPUT",
+        "Words in Category": [
+          "BRAND",
+          "COLLECTION",
+          "LABEL",
+          "LINE"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "PLAYGROUND VERBS",
+        "Words in Category": [
+          "DODGE",
+          "HIDE",
+          "HOP",
+          "TAG"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "LOONEY TUNES FIGURES",
+        "Words in Category": [
+          "BUNNY",
+          "DUCK",
+          "MARTIAN",
+          "PIG"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "HOMOPHONES OF MUSICALS",
+        "Words in Category": [
+          "GREECE",
+          "HARE",
+          "KATZ",
+          "MAIM"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "DODGE",
+        "HARE",
+        "HIDE",
+        "HOP"
+      ],
+      [
+        "LABEL",
+        "LINE",
+        "PIG",
+        "TAG"
+      ],
+      [
+        "BUNNY",
+        "COLLECTION",
+        "DUCK",
+        "KATZ"
+      ],
+      [
+        "BRAND",
+        "GREECE",
+        "MAIM",
+        "MARTIAN"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [RECESS, CLASSIC, PRIDE, DOWNTOWN]\nCategory2: [RAGTAG, CRANNY, NOOK, NICHE]\nCategory3: [BIGWIG, COLONY, HERD, MODEL]\nCategory4: [TEXTBOOK, SCHOOL, BACKPACK, DEFINITIVE]\n\nHere's today's game:\nWords: ['CAMP', 'FERRY', 'SHELTER', 'BOAT', 'PARK', 'WATER', 'COTTAGE', 'RIVER', 'CABIN', 'LAKE', 'SHORE', 'WATERWAY",
+    "reasoning_annotation": [
+      {
+        "Categories": "ANIMAL GROUPS",
+        "Words in Category": [
+          "COLONY",
+          "HERD",
+          "PRIDE",
+          "SCHOOL"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "SMALL OPENING",
+        "Words in Category": [
+          "CRANNY",
+          "NICHE",
+          "NOOK",
+          "RECESS"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "PARADIGMATIC",
+        "Words in Category": [
+          "CLASSIC",
+          "DEFINITIVE",
+          "MODEL",
+          "TEXTBOOK"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "RHYMING COMPOUND WORDS",
+        "Words in Category": [
+          "BACKPACK",
+          "BIGWIG",
+          "DOWNTOWN",
+          "RAGTAG"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CLASSIC",
+        "DOWNTOWN",
+        "PRIDE",
+        "RECESS"
+      ],
+      [
+        "CRANNY",
+        "NICHE",
+        "NOOK",
+        "RAGTAG"
+      ],
+      [
+        "BIGWIG",
+        "COLONY",
+        "HERD",
+        "MODEL"
+      ],
+      [
+        "BACKPACK",
+        "DEFINITIVE",
+        "SCHOOL",
+        "TEXTBOOK"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [SHARES, OPTIONS, STOCKS, EQUITY]\nCategory2: [BILLINGS, INSULTS, PUPPETS, MOBILE]\nCategory3: [LEMMINGS, SHEEP, BUFFALO, SHOVELS]\nCategory4: [LIKES, APARTMENT, FOLLOWERS, PHOENIX]\n\nHere is the list of words for today's game:\nWords: ['MORNING', 'EVENING', 'SPRING', 'AUTUMN', 'WINTER', 'SUMMER', 'MIDNIGHT', 'SNOWFLAKE', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "CONFORMISTS",
+        "Words in Category": [
+          "FOLLOWERS",
+          "LEMMINGS",
+          "PUPPETS",
+          "SHEEP"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "COMPANY OWNERSHIP OFFERS",
+        "Words in Category": [
+          "EQUITY",
+          "OPTIONS",
+          "SHARES",
+          "STOCKS"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "U.S. CITIES",
+        "Words in Category": [
+          "BILLINGS",
+          "BUFFALO",
+          "MOBILE",
+          "PHOENIX"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "WHAT \"DIGS\" MIGHT MEAN",
+        "Words in Category": [
+          "APARTMENT",
+          "INSULTS",
+          "LIKES",
+          "SHOVELS"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BILLINGS",
+        "INSULTS",
+        "MOBILE",
+        "PUPPETS"
+      ],
+      [
+        "BUFFALO",
+        "LEMMINGS",
+        "SHEEP",
+        "SHOVELS"
+      ],
+      [
+        "APARTMENT",
+        "FOLLOWERS",
+        "LIKES",
+        "PHOENIX"
+      ]
+    ],
+    "count_incorrect_inference_results": 3
+  },
+  {
+    "new_token_prediction": "(Note: This is an example. Do not use it. Do not try to solve it. Use it to understand the format)\n\nCategory1: ['BUMPY', 'ROCKY', 'UNEVEN', 'RUGGED']\nCategory2: ['SOUTH', 'NATIONAL', 'PARALLEL', 'STITCH']\nCategory3: ['AMUSEMENT', 'CHIP', 'PARCEL', 'BED']\nCategory4: ['SCRATCHY', 'PATCH', 'PLOT', 'ROUGH']\n\nNote: This is an example. Do not use it. Do not try to solve it. Use it to understand the",
+    "reasoning_annotation": [
+      {
+        "Categories": "NOT SMOOTH, AS TERRAIN",
+        "Words in Category": [
+          "BUMPY",
+          "ROUGH",
+          "RUGGED",
+          "UNEVEN"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "BIT OF LAND FOR GROWING",
+        "Words in Category": [
+          "BED",
+          "PARCEL",
+          "PATCH",
+          "PLOT"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "MEMBER OF A CARTOON DUO",
+        "Words in Category": [
+          "CHIP",
+          "ROCKY",
+          "SCRATCHY",
+          "STITCH"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "___ PARK",
+        "Words in Category": [
+          "AMUSEMENT",
+          "NATIONAL",
+          "PARALLEL",
+          "SOUTH"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BUMPY",
+        "ROCKY",
+        "RUGGED",
+        "UNEVEN"
+      ],
+      [
+        "NATIONAL",
+        "PARALLEL",
+        "SOUTH",
+        "STITCH"
+      ],
+      [
+        "AMUSEMENT",
+        "BED",
+        "CHIP",
+        "PARCEL"
+      ],
+      [
+        "PATCH",
+        "PLOT",
+        "ROUGH",
+        "SCRATCHY"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['CHESHIRE CAT', 'VENUS DE MILO', 'SPHYNX', 'RUG']\nCategory2: ['LIBERTY BELL', 'TURKISH ANGORA', 'RUSSIAN BLUE', 'RAGAMUFFIN']\nCategory3: ['BATHROBE', 'COMEDY MASK', 'WHITE RUSSIAN', 'STATUE OF LIBERTY']\nCategory4: ['JOKER', 'MONA LISA', 'BOWLING', 'TOWER OF PISA']\n\nI will give you the list of words:\n['FRA', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "CAT BREEDS",
+        "Words in Category": [
+          "RAGAMUFFIN",
+          "RUSSIAN BLUE",
+          "SPHYNX",
+          "TURKISH ANGORA"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "FAMOUS SMILES",
+        "Words in Category": [
+          "CHESHIRE CAT",
+          "COMEDY MASK",
+          "JOKER",
+          "MONA LISA"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "ATTRACTIONS ICONICALLY DIFFERENT FROM THEIR ORIGINAL FORMS",
+        "Words in Category": [
+          "LIBERTY BELL",
+          "VENUS DE MILO",
+          "STATUE OF LIBERTY",
+          "TOWER OF PISA"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "ASSOCIATED WITH \"THE DUDE\" LEBOWSKI",
+        "Words in Category": [
+          "BATHROBE",
+          "BOWLING",
+          "RUG",
+          "WHITE RUSSIAN"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CHESHIRE CAT",
+        "RUG",
+        "SPHYNX",
+        "VENUS DE MILO"
+      ],
+      [
+        "LIBERTY BELL",
+        "RAGAMUFFIN",
+        "RUSSIAN BLUE",
+        "TURKISH ANGORA"
+      ],
+      [
+        "BATHROBE",
+        "COMEDY MASK",
+        "STATUE OF LIBERTY",
+        "WHITE RUSSIAN"
+      ],
+      [
+        "BOWLING",
+        "JOKER",
+        "MONA LISA",
+        "TOWER OF PISA"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['GRIME', 'SPARKLE', 'FLASH', 'FISH']\nCategory2: ['RAIL', 'HUNT', 'CRUNK', 'BEER']\nCategory3: ['BULB', 'DRILL', 'FORAGE', 'YEAR']\nCategory4: ['CRUNK', 'BOUNCE', 'TRAP', 'GLEAM']\n\nHere is today's list of words:\nWords: ['FROG', 'TOAD', 'BULLFROG', 'POND', 'LILY', 'WATER', 'TURTLE', 'FROGS', '",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "FISH",
+        "FLASH",
+        "GRIME",
+        "SPARKLE"
+      ],
+      [
+        "BEER",
+        "CRUNK",
+        "HUNT",
+        "RAIL"
+      ],
+      [
+        "BULB",
+        "DRILL",
+        "FORAGE",
+        "YEAR"
+      ],
+      [
+        "BOUNCE",
+        "CRUNK",
+        "GLEAM",
+        "TRAP"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [FRONTIER, OUTLAW, SHERIFF, SPIRIT]\nCategory2: [COWBOY, LASSO, ROGERS, SOUTHWEST]\nCategory3: [ALASKA, CLEVER, SMART, QUICK]\nCategory4: [BRIGHT, DRIFTER, MARS, SHARP]\n\nWords: ['OUTLAW', 'FRONTIER', 'SHARP', 'ROGERS', 'SPIRIT', 'SHERIFF', 'COWBOY', 'LASSO', 'ALASKA', 'DRIFTER',",
+    "reasoning_annotation": [
+      {
+        "Categories": "INTELLIGENT",
+        "Words in Category": [
+          "BRIGHT",
+          "CLEVER",
+          "QUICK",
+          "SHARP"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "AIRLINES",
+        "Words in Category": [
+          "ALASKA",
+          "FRONTIER",
+          "SOUTHWEST",
+          "SPIRIT"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "WESTERN TROPES",
+        "Words in Category": [
+          "COWBOY",
+          "DRIFTER",
+          "OUTLAW",
+          "SHERIFF"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "TV SHOW TITLE SURNAMES",
+        "Words in Category": [
+          "LASSO",
+          "MARS",
+          "ROGERS",
+          "SMART"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "FRONTIER",
+        "OUTLAW",
+        "SHERIFF",
+        "SPIRIT"
+      ],
+      [
+        "COWBOY",
+        "LASSO",
+        "ROGERS",
+        "SOUTHWEST"
+      ],
+      [
+        "ALASKA",
+        "CLEVER",
+        "QUICK",
+        "SMART"
+      ],
+      [
+        "BRIGHT",
+        "DRIFTER",
+        "MARS",
+        "SHARP"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['CAPER', 'CHEESE', 'SUGGESTIVE', 'SWEET']\nCategory2: ['ADULT', 'KOSHER', 'SOUR', 'ANTIC']\nCategory3: ['STUNT', '",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "CAPER",
+        "CHEESE",
+        "SUGGESTIVE",
+        "SWEET"
+      ],
+      [
+        "ADULT",
+        "ANTIC",
+        "KOSHER",
+        "SOUR"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "(Do not submit this part, just the answer below)\nCategory1: [SINGULAR, DEER, MICE, ANGST]\nCategory2: [REMARKABLE, OXEN, UNIQUE, SHRIMP]\nCategory3: [SPECIAL, DIE, KINDER, SQUID]\nCategory4: [LICE, SHEEP, WURST, DICE]\n\nNote: This is a new example and not the actual game. Please do not submit this example as your answer. \n\nWords: ['FROG', 'CAMEL', 'BIRD', 'ELEPHANT', 'EYE",
+    "reasoning_annotation": [
+      {
+        "Categories": "EXCEPTIONAL",
+        "Words in Category": [
+          "REMARKABLE",
+          "SINGULAR",
+          "SPECIAL",
+          "UNIQUE"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "GERMAN WORDS",
+        "Words in Category": [
+          "ANGST",
+          "DIE",
+          "KINDER",
+          "WURST"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "PLURAL ANIMALS IDENTICAL TO THEIR SINGULAR FORMS",
+        "Words in Category": [
+          "DEER",
+          "SHEEP",
+          "SHRIMP",
+          "SQUID"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "PLURAL WORDS THAT ARE VERY DIFFERENT FROM THEIR SINGULAR FORMS",
+        "Words in Category": [
+          "DICE",
+          "LICE",
+          "MICE",
+          "OXEN"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "ANGST",
+        "DEER",
+        "MICE",
+        "SINGULAR"
+      ],
+      [
+        "OXEN",
+        "REMARKABLE",
+        "SHRIMP",
+        "UNIQUE"
+      ],
+      [
+        "DIE",
+        "KINDER",
+        "SPECIAL",
+        "SQUID"
+      ],
+      [
+        "DICE",
+        "LICE",
+        "SHEEP",
+        "WURST"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['COUPLE', 'JOIN', 'LINK', 'TIE']\nCategory2: ['FOOL', 'LOVERS', 'PAIN', 'SEVERAL']\nCategory3: ['BOTHER', 'FEW', 'MANY', 'PEST']\nCategory4: ['HANDFUL', 'MAGICIAN', 'SOME', 'TOWER']\n\nHere's today's example:\nWords: ['STAGE', 'BAND', 'ORCHESTRA', 'CONDUCTOR', 'WAVE', 'RIPPLE', 'TIDE', 'OCEAN', 'DRUM', 'P",
+    "reasoning_annotation": [
+      {
+        "Categories": "CONNECT",
+        "Words in Category": [
+          "COUPLE",
+          "JOIN",
+          "LINK",
+          "TIE"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "NUISANCE",
+        "Words in Category": [
+          "BOTHER",
+          "HANDFUL",
+          "PAIN",
+          "PEST"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "QUANTITY WORDS",
+        "Words in Category": [
+          "FEW",
+          "MANY",
+          "SEVERAL",
+          "SOME"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "TAROT CARDS, WITH \"THE\"",
+        "Words in Category": [
+          "FOOL",
+          "LOVERS",
+          "MAGICIAN",
+          "TOWER"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "FOOL",
+        "LOVERS",
+        "PAIN",
+        "SEVERAL"
+      ],
+      [
+        "BOTHER",
+        "FEW",
+        "MANY",
+        "PEST"
+      ],
+      [
+        "HANDFUL",
+        "MAGICIAN",
+        "SOME",
+        "TOWER"
+      ]
+    ],
+    "count_incorrect_inference_results": 3
+  },
+  {
+    "new_token_prediction": "Category1: ['SPLASH', 'PINCH', 'DROP', 'RASP']\nCategory2: ['ON BOARD', 'IN', 'DOWN', 'STRAW']\nCategory3: ['TRAIN', 'PLANE', 'BOAT', 'CAR']\nCategory4: ['GOOSE', 'GAME', 'DASH', 'BLUE']\n\nWords: ['WATER', 'EYE', 'FIRE', 'COLD', 'WATERFALL', 'FOOT', 'COLD', 'BRAVE', 'WATERLOO', 'FROST', 'MOUTH', 'HEART', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "MEANS OF TRANSPORTATION",
+        "Words in Category": [
+          "BOAT",
+          "CAR",
+          "PLANE",
+          "TRAIN"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "WILLING TO PARTICIPATE",
+        "Words in Category": [
+          "DOWN",
+          "GAME",
+          "IN",
+          "ON BOARD"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "LITTLE BIT, IN A RECIPE",
+        "Words in Category": [
+          "DASH",
+          "DROP",
+          "PINCH",
+          "SPLASH"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "___BERRY",
+        "Words in Category": [
+          "BLUE",
+          "GOOSE",
+          "RASP",
+          "STRAW"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "DROP",
+        "PINCH",
+        "RASP",
+        "SPLASH"
+      ],
+      [
+        "DOWN",
+        "IN",
+        "ON BOARD",
+        "STRAW"
+      ],
+      [
+        "BLUE",
+        "DASH",
+        "GAME",
+        "GOOSE"
+      ]
+    ],
+    "count_incorrect_inference_results": 3
+  },
+  {
+    "new_token_prediction": "(answer)\nCategory1: [CLUB, BEANBAG, RING, TORCH]\nCategory2: [HANGAR, TARMAC, TERMINAL, RUNWAY]\nCategory3: [CLAIM, ACTION, LAWSUIT, COMPLAINT]\nCategory4: [TURNCOAT, FOXGLOVE, GUMSHOE, WINDSOCK]\n\nWords: ['BEAUTY', 'PARLOR', 'PARK', 'PENNY', 'MIDNIGHT', 'SUNSET', 'STAGE', 'FRENCH', 'DARK', 'WATER',",
+    "reasoning_annotation": [
+      {
+        "Categories": "PARTS OF AN AIRPORT",
+        "Words in Category": [
+          "HANGAR",
+          "RUNWAY",
+          "TARMAC",
+          "TERMINAL"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "LEGAL TERMS",
+        "Words in Category": [
+          "ACTION",
+          "CLAIM",
+          "COMPLAINT",
+          "LAWSUIT"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "THINGS A JUGGLER JUGGLES",
+        "Words in Category": [
+          "BEANBAG",
+          "CLUB",
+          "RING",
+          "TORCH"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "WORDS ENDING IN CLOTHING",
+        "Words in Category": [
+          "FOXGLOVE",
+          "GUMSHOE",
+          "TURNCOAT",
+          "WINDSOCK"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [],
+    "count_incorrect_inference_results": 0
+  },
+  {
+    "new_token_prediction": "Category1: ['SEAL', 'DUCK', 'SHARK', 'CRAB']\nCategory2: ['CROUCH', 'SQUAT', 'STOOP', 'CRANK']\nCategory3: ['GROUCH', 'GRUMP', 'QUACK', 'FLAG']\nCategory4: ['CROOK', 'CHEAT', 'MOTTO', 'ANTHEM']\n\nNow it's your turn. Here is today's list of words:\nWords: ['LUMBER', 'RUST', 'SALT', 'BRINE', 'PINE', 'SEW', 'PULP",
+    "reasoning_annotation": [
+      {
+        "Categories": "CURMUDGEON",
+        "Words in Category": [
+          "CRAB",
+          "CRANK",
+          "GROUCH",
+          "GRUMP"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "GET LOW",
+        "Words in Category": [
+          "CROUCH",
+          "DUCK",
+          "SQUAT",
+          "STOOP"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "NATIONAL SYMBOLS",
+        "Words in Category": [
+          "ANTHEM",
+          "FLAG",
+          "MOTTO",
+          "SEAL"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "SWINDLER",
+        "Words in Category": [
+          "CHEAT",
+          "CROOK",
+          "QUACK",
+          "SHARK"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CRAB",
+        "DUCK",
+        "SEAL",
+        "SHARK"
+      ],
+      [
+        "CRANK",
+        "CROUCH",
+        "SQUAT",
+        "STOOP"
+      ],
+      [
+        "FLAG",
+        "GROUCH",
+        "GRUMP",
+        "QUACK"
+      ],
+      [
+        "ANTHEM",
+        "CHEAT",
+        "CROOK",
+        "MOTTO"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [DALE, GLEN, HUE, HOPE]\nCategory2: [ROSS, GARY, DRE, MARLEY]\nCategory3: [SHADE, COLOR, LUBE, TONE]\nCategory4: [DOLE, DELL, GENRE, HOLLOW]\n\n**Words:** ['GEO', 'HARD', 'LEAD', 'ROCK', 'MID', 'NIGHT', 'STAR', 'FIRE', 'WATER', 'ICE', 'MOLTEN', 'LAVA', 'SNOW', 'POT', 'BOIL', 'SOUP",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "DALE",
+        "GLEN",
+        "HOPE",
+        "HUE"
+      ],
+      [
+        "DRE",
+        "GARY",
+        "MARLEY",
+        "ROSS"
+      ],
+      [
+        "COLOR",
+        "LUBE",
+        "SHADE",
+        "TONE"
+      ],
+      [
+        "DELL",
+        "DOLE",
+        "GENRE",
+        "HOLLOW"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [KISS, WHOPPER, GOOBER, PLAID]\nCategory2: [LIE, ROMANCE, MUSICAL, PAISLEY]\nCategory3: [TALE, WESTERN, FICTION, HOUNDSTOOTH]\nCategory4: [DOT, HORROR, FIB, STRIPES]\n\nToday's words: ['BRAIN', 'SPOT', 'SPILL', 'SPREAD', 'DRILL', 'PUNCH', 'PILL', 'PUNCHLINE', 'SPIT', 'SPITTOON', 'SPITWORTH', 'SP",
+    "reasoning_annotation": [
+      {
+        "Categories": "MOVIE GENRES",
+        "Words in Category": [
+          "HORROR",
+          "MUSICAL",
+          "ROMANCE",
+          "WESTERN"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "PATTERNS",
+        "Words in Category": [
+          "HOUNDSTOOTH",
+          "PAISLEY",
+          "PLAID",
+          "STRIPES"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "SYNONYMS FOR FALSEHOOD",
+        "Words in Category": [
+          "FIB",
+          "FICTION",
+          "LIE",
+          "TALE"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "CANDY PIECES",
+        "Words in Category": [
+          "DOT",
+          "GOOBER",
+          "KISS",
+          "WHOPPER"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "GOOBER",
+        "KISS",
+        "PLAID",
+        "WHOPPER"
+      ],
+      [
+        "LIE",
+        "MUSICAL",
+        "PAISLEY",
+        "ROMANCE"
+      ],
+      [
+        "FICTION",
+        "HOUNDSTOOTH",
+        "TALE",
+        "WESTERN"
+      ],
+      [
+        "DOT",
+        "FIB",
+        "HORROR",
+        "STRIPES"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "(Category1, Category2, Category3, Category4) = ('Title of a Shakespearean play', 'Things that are black', 'Things that are found in a theater', 'Words related to the automotive industry')\nCategory1: ['STOP', 'GAME', 'BLOCK', 'ACTOR']\nCategory2: ['HUNT', 'FORD', 'OXEN', 'CAR']\nCategory3: ['PRESIDENT', 'BLOCK', 'CONCERT', 'DIRECTOR']\nCategory4: ['GAME', 'MOVIE', 'CAR', 'CHECK']\n\nToday's list of words is:\n['LAMP', 'PRES",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "ACTOR",
+        "BLOCK",
+        "GAME",
+        "STOP"
+      ],
+      [
+        "CAR",
+        "FORD",
+        "HUNT",
+        "OXEN"
+      ],
+      [
+        "BLOCK",
+        "CONCERT",
+        "DIRECTOR",
+        "PRESIDENT"
+      ],
+      [
+        "CAR",
+        "CHECK",
+        "GAME",
+        "MOVIE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [LOOSE, DRAIN, DUCT, SEWER]\nCategory2: [WINDOW, SEA, SAP, PIPE]\nCategory3: [SCHMALTZ, CLIMATE, CHEESE, KNUCKLES]\nCategory4: [SMILE, CORN, CHUMP, EGG]\n\nNow it's your turn. Solve the NYT Connections game.\n\nWords: ['FROG', 'LADY', 'FERN', 'BUTTERFLY', 'BEE', 'HORNET', 'DRAGONFLY', 'STAGE', 'WATER', 'HONEY",
+    "reasoning_annotation": [
+      {
+        "Categories": "CONDUITS FOR WATER REMOVAL",
+        "Words in Category": [
+          "DRAIN",
+          "DUCT",
+          "PIPE",
+          "SEWER"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "FOOD PRODUCTS ASSOCIATED WITH SENTIMENTALITY",
+        "Words in Category": [
+          "CHEESE",
+          "CORN",
+          "SAP",
+          "SCHMALTZ"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "THINGS TO CRACK",
+        "Words in Category": [
+          "EGG",
+          "KNUCKLES",
+          "SMILE",
+          "WINDOW"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "___ CHANGE",
+        "Words in Category": [
+          "CHUMP",
+          "CLIMATE",
+          "LOOSE",
+          "SEA"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "DRAIN",
+        "DUCT",
+        "LOOSE",
+        "SEWER"
+      ],
+      [
+        "PIPE",
+        "SAP",
+        "SEA",
+        "WINDOW"
+      ],
+      [
+        "CHEESE",
+        "CLIMATE",
+        "KNUCKLES",
+        "SCHMALTZ"
+      ],
+      [
+        "CHUMP",
+        "CORN",
+        "EGG",
+        "SMILE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['STANDARD', 'NORMAL', 'CHECK', 'BENCHMARK']\nCategory2: ['BET', 'WASH', 'YARDSTICK', 'GAUGE']\nCategory3: ['MARY', 'CALL', 'DRY', 'OILY']\nCategory4: ['KENT', 'MASS', 'COMBINATION', 'FOLD']\n\nHere is the list of words for today's game:\n['BRAID', 'WEAVE', 'TWIN', 'SING', 'HARMONY', 'CROON', 'SONG', 'DUET', 'TUNE', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "BENCHMARK",
+        "Words in Category": [
+          "BENCHMARK",
+          "GAUGE",
+          "STANDARD",
+          "YARDSTICK"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "POKER ACTIONS",
+        "Words in Category": [
+          "BET",
+          "CALL",
+          "CHECK",
+          "FOLD"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "SKIN TYPES",
+        "Words in Category": [
+          "COMBINATION",
+          "DRY",
+          "NORMAL",
+          "OILY"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "STARTS OF U.S. STATES",
+        "Words in Category": [
+          "KENT",
+          "MARY",
+          "MASS",
+          "WASH"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BENCHMARK",
+        "CHECK",
+        "NORMAL",
+        "STANDARD"
+      ],
+      [
+        "BET",
+        "GAUGE",
+        "WASH",
+        "YARDSTICK"
+      ],
+      [
+        "CALL",
+        "DRY",
+        "MARY",
+        "OILY"
+      ],
+      [
+        "COMBINATION",
+        "FOLD",
+        "KENT",
+        "MASS"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [HOUSE, HOTEL, LODGE, CRUISE]\nCategory2: [WEDGE, BLEND, DEED, QUALITY]\nCategory3: [HYBRID, COMPOUND, CROSS, PLANT]\nCategory4: [TOKEN, BIRTH, REMOTE, STICK]\n\n### Step 1: Analyze the given list of words\nThe list of words provided is: ['HOUSE', 'COMPOUND', 'HYBRID', 'HOTEL', 'WEDGE', 'BLEND', 'DEED', 'QUALITY', 'CRUISE', 'REMOTE', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "COMPOSITE",
+        "Words in Category": [
+          "BLEND",
+          "COMPOUND",
+          "CROSS",
+          "HYBRID"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "EMBED",
+        "Words in Category": [
+          "LODGE",
+          "PLANT",
+          "STICK",
+          "WEDGE"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "ITEMS IN A MONOPOLY BOX",
+        "Words in Category": [
+          "DEED",
+          "HOTEL",
+          "HOUSE",
+          "TOKEN"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "___ CONTROL",
+        "Words in Category": [
+          "BIRTH",
+          "CRUISE",
+          "QUALITY",
+          "REMOTE"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CRUISE",
+        "HOTEL",
+        "HOUSE",
+        "LODGE"
+      ],
+      [
+        "BLEND",
+        "DEED",
+        "QUALITY",
+        "WEDGE"
+      ],
+      [
+        "COMPOUND",
+        "CROSS",
+        "HYBRID",
+        "PLANT"
+      ],
+      [
+        "BIRTH",
+        "REMOTE",
+        "STICK",
+        "TOKEN"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['BUCK', 'BELLY', 'STICKER', 'SOLE']\nCategory2: ['CLAM', 'SINGLE', 'OYSTER', 'HEEL']\nCategory3: ['ARCH', 'HOLE', 'SMACKER', 'BUTTON']\nCategory4: ['TRUMPET', 'LUCK', 'BALL', 'MOREL']\n\nNow it's your turn to play today's NYT Connections game. Here are the words:\n['FROG', 'TOAD', 'CRICKET', 'BUTTERFLY', 'DRAGONFLY', 'GRASSHOPPER',",
+    "reasoning_annotation": [
+      {
+        "Categories": "PARTS OF A FOOT",
+        "Words in Category": [
+          "ARCH",
+          "BALL",
+          "HEEL",
+          "SOLE"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "ONE DOLLAR",
+        "Words in Category": [
+          "BUCK",
+          "CLAM",
+          "SINGLE",
+          "SMACKER"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "KINDS OF MUSHROOMS",
+        "Words in Category": [
+          "BUTTON",
+          "MOREL",
+          "OYSTER",
+          "TRUMPET"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "POT___",
+        "Words in Category": [
+          "BELLY",
+          "HOLE",
+          "LUCK",
+          "STICKER"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BELLY",
+        "BUCK",
+        "SOLE",
+        "STICKER"
+      ],
+      [
+        "CLAM",
+        "HEEL",
+        "OYSTER",
+        "SINGLE"
+      ],
+      [
+        "ARCH",
+        "BUTTON",
+        "HOLE",
+        "SMACKER"
+      ],
+      [
+        "BALL",
+        "LUCK",
+        "MOREL",
+        "TRUMPET"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['CLOCK', 'CALENDAR', 'CAMERA', 'CALCULATOR']\nCategory2: ['ROSE', 'IRIS', 'MUM', 'POPPY']\nCategory3: ['PUPIL', 'LENS', 'EXPOSE', 'GRAMMY']\nCategory4: ['PATE', 'DADA', 'CONE', 'RESUME']\n\nWords: ['SALAD', 'TARTAR', 'SOUFFLE', 'QUICHE', 'FLY', 'SPOT', 'SPIN', 'DIP', 'TRAP', 'NET', 'FISH",
+    "reasoning_annotation": [
+      {
+        "Categories": "SMARTPHONE FEATURES BEGINNING WITH \"C\"",
+        "Words in Category": [
+          "CALCULATOR",
+          "CALENDAR",
+          "CAMERA",
+          "CLOCK"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "PARTS OF THE EYE",
+        "Words in Category": [
+          "CONE",
+          "IRIS",
+          "LENS",
+          "PUPIL"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "FAMILIAL NICKNAMES",
+        "Words in Category": [
+          "DADA",
+          "GRAMMY",
+          "MUM",
+          "POPPY"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "WORDS PRONOUNCED DIFFERENTLY WITH ACCENT MARKS",
+        "Words in Category": [
+          "EXPOSE",
+          "PATE",
+          "RESUME",
+          "ROSE"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "IRIS",
+        "MUM",
+        "POPPY",
+        "ROSE"
+      ],
+      [
+        "EXPOSE",
+        "GRAMMY",
+        "LENS",
+        "PUPIL"
+      ],
+      [
+        "CONE",
+        "DADA",
+        "PATE",
+        "RESUME"
+      ]
+    ],
+    "count_incorrect_inference_results": 3
+  },
+  {
+    "new_token_prediction": "(Note: I'll give you the answer below)\nCategory1: ['APPEAR', 'SEEM', 'LOOK', 'LISTEN']\nCategory2: ['TITANIC', 'GIANT', 'MONSTER', 'MAMMOTH']\nCategory3: ['WITCH', 'CHARACTER', 'CASTLE', 'PERSONA']\nCategory4: ['HUSTLE', 'AVATAR', 'FIGURE', 'GIANT']\n\nNow it's your turn to solve today's NYT Connections game.\nWords: ['FLOOR', 'BOARD', 'CLOCK', 'ROCK', 'CUSHION', 'H",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "APPEAR",
+        "LISTEN",
+        "LOOK",
+        "SEEM"
+      ],
+      [
+        "GIANT",
+        "MAMMOTH",
+        "MONSTER",
+        "TITANIC"
+      ],
+      [
+        "CASTLE",
+        "CHARACTER",
+        "PERSONA",
+        "WITCH"
+      ],
+      [
+        "AVATAR",
+        "FIGURE",
+        "GIANT",
+        "HUSTLE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['COUNTER', 'STOOL', 'TABLE', 'BARREL']\nCategory2: ['POSTPONE', 'DELAY', 'SUB', 'TUG']\nCategory3: ['HAMMER', 'LADDER', 'TAP', 'GORILLA']\nCategory4: ['JUNK', 'KEG', 'BARGE', 'SHELVE']\n\nHere is the list of words for today's game:\n['DYNAMITE', 'WATER', 'FIRE', 'ICE', 'SAND', 'HOT', 'COLD', 'SNOW', 'HEAT', 'FRO",
+    "reasoning_annotation": [
+      {
+        "Categories": "DEFER",
+        "Words in Category": [
+          "DELAY",
+          "POSTPONE",
+          "SHELVE",
+          "TABLE"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "BAR FIXTURES",
+        "Words in Category": [
+          "COUNTER",
+          "KEG",
+          "STOOL",
+          "TAP"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "WATERCRAFT",
+        "Words in Category": [
+          "BARGE",
+          "JUNK",
+          "SUB",
+          "TUG"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "SEEN IN \"DONKEY KONG\"",
+        "Words in Category": [
+          "BARREL",
+          "GORILLA",
+          "HAMMER",
+          "LADDER"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BARREL",
+        "COUNTER",
+        "STOOL",
+        "TABLE"
+      ],
+      [
+        "DELAY",
+        "POSTPONE",
+        "SUB",
+        "TUG"
+      ],
+      [
+        "GORILLA",
+        "HAMMER",
+        "LADDER",
+        "TAP"
+      ],
+      [
+        "BARGE",
+        "JUNK",
+        "KEG",
+        "SHELVE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['BOW', 'GOBBLE', 'SCARF', 'WOLF']\nCategory2: ['CAVE', 'COMPASS', 'GULP', 'SHINE']\nCategory3: ['ANCHOR', 'BUCKLE', 'HEARTH', 'MERMAID']\nCategory4: ['BUTTE', 'CHINA', 'GIVE', 'SWALLOW']\n\nNote: This is a hard example. The connections are subtle and it requires a good understanding of the words and their meanings. You may need to think outside the box to come up with the correct categories. \n\nWord List:",
+    "reasoning_annotation": [
+      {
+        "Categories": "EAT VORACIOUSLY",
+        "Words in Category": [
+          "GOBBLE",
+          "GULP",
+          "SCARF",
+          "WOLF"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "BEND UNDER PRESSURE",
+        "Words in Category": [
+          "BOW",
+          "BUCKLE",
+          "CAVE",
+          "GIVE"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "CLASSIC NAUTICAL TATTOOS",
+        "Words in Category": [
+          "ANCHOR",
+          "COMPASS",
+          "MERMAID",
+          "SWALLOW"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "BODY PARTS PLUS LETTER",
+        "Words in Category": [
+          "BUTTE",
+          "CHINA",
+          "HEARTH",
+          "SHINE"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BOW",
+        "GOBBLE",
+        "SCARF",
+        "WOLF"
+      ],
+      [
+        "CAVE",
+        "COMPASS",
+        "GULP",
+        "SHINE"
+      ],
+      [
+        "ANCHOR",
+        "BUCKLE",
+        "HEARTH",
+        "MERMAID"
+      ],
+      [
+        "BUTTE",
+        "CHINA",
+        "GIVE",
+        "SWALLOW"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [WEDGE, IRON, DIAMOND, CLUB]\nCategory2: [HEART, SHY, SHORT, PINE]\nCategory3: [LOW, WOOD, ACRE, CLIP]\nCategory4: [LONG, WANTING, THIRST, SPADE]\n\nWords: ['HEART', 'SHY', 'LONG', 'WEDGE', 'PUTTER', 'LOW', 'WANTING', 'WOOD', 'ACHE', 'CLUB', 'IRON', 'THIRST', 'PINE', 'SHORT', 'DIAMOND', 'SPADE']\n\nMy answer:\nGroup",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "CLUB",
+        "DIAMOND",
+        "IRON",
+        "WEDGE"
+      ],
+      [
+        "HEART",
+        "PINE",
+        "SHORT",
+        "SHY"
+      ],
+      [
+        "ACRE",
+        "CLIP",
+        "LOW",
+        "WOOD"
+      ],
+      [
+        "LONG",
+        "SPADE",
+        "THIRST",
+        "WANTING"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['RECORD', 'BREAKING', 'CRUSH', 'CRICKET']\nCategory2: ['PRESS', 'HARE', 'VOLLEYBALL', 'MASH']\nCategory3: ['SQUASH', 'SKELETON', 'FROG', 'MOOD']\nCategory4: ['KANGAROO', 'TRAMPOLINE', 'TABLE', 'HOCKEY']\n\nThe list of words is below. Please make your answer following the structure above:\nWords: ['CLOUD', 'CLOCK', 'FROG', 'FROZEN', 'MUSHROOM",
+    "reasoning_annotation": [
+      {
+        "Categories": "JUMPING ANIMALS",
+        "Words in Category": [
+          "CRICKET",
+          "FROG",
+          "HARE",
+          "KANGAROO"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "APPLY PRESSURE TO",
+        "Words in Category": [
+          "CRUSH",
+          "MASH",
+          "PRESS",
+          "SQUASH"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "OLYMPIC SPORTS",
+        "Words in Category": [
+          "BREAKING",
+          "HOCKEY",
+          "SKELETON",
+          "TRAMPOLINE"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "THINGS YOU CAN SET",
+        "Words in Category": [
+          "MOOD",
+          "RECORD",
+          "TABLE",
+          "VOLLEYBALL"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BREAKING",
+        "CRICKET",
+        "CRUSH",
+        "RECORD"
+      ],
+      [
+        "HARE",
+        "MASH",
+        "PRESS",
+        "VOLLEYBALL"
+      ],
+      [
+        "FROG",
+        "MOOD",
+        "SKELETON",
+        "SQUASH"
+      ],
+      [
+        "HOCKEY",
+        "KANGAROO",
+        "TABLE",
+        "TRAMPOLINE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['BROIL', 'BAKE', 'BLUR', 'PULP']\nCategory2: ['LIGHT', 'TRACK', 'BEACH', 'TIMER']\nCategory3: ['PLAYGROUND', 'OASIS', 'SUEDE', 'SURVEY']\nCategory4: ['MONITOR', 'HOURGLASS', 'DESERT', 'WATCH']\n\nHere is today's list of words:\nWords: ['BRITANNICA', 'WIKIPEDIA', 'ENCYCLOPEDIA', 'LEXICON', 'DICTIONARY', 'GEOGRAPHY', 'ENCYCLO",
+    "reasoning_annotation": [
+      {
+        "Categories": "FOLLOW ATTENTIVELY",
+        "Words in Category": [
+          "MONITOR",
+          "SURVEY",
+          "TRACK",
+          "WATCH"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "WHERE YOU MIGHT FIND SAND",
+        "Words in Category": [
+          "BEACH",
+          "DESERT",
+          "HOURGLASS",
+          "PLAYGROUND"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "OVEN BUTTONS",
+        "Words in Category": [
+          "BAKE",
+          "BROIL",
+          "LIGHT",
+          "TIMER"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "BRITPOP BANDS",
+        "Words in Category": [
+          "BLUR",
+          "OASIS",
+          "PULP",
+          "SUEDE"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BAKE",
+        "BLUR",
+        "BROIL",
+        "PULP"
+      ],
+      [
+        "BEACH",
+        "LIGHT",
+        "TIMER",
+        "TRACK"
+      ],
+      [
+        "OASIS",
+        "PLAYGROUND",
+        "SUEDE",
+        "SURVEY"
+      ],
+      [
+        "DESERT",
+        "HOURGLASS",
+        "MONITOR",
+        "WATCH"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['DRINK', 'GAME', 'WILLING', 'SPORT']\nCategory2: ['AARDVARK', 'BUDDY', 'TIGER', 'LLAMA']\nCategory3: ['BLUE', 'CHAMP', 'EERIE', 'BRINY']\nCategory4: ['AMENABLE', 'DEEP', 'DOWN', 'OOZE']\n\nHere are the words for today's game:\nWords: ['SHEEP', 'LION', 'CAMEL', 'DONKEY', 'FROG', 'COW', 'HORSE', 'GOAT', 'DU",
+    "reasoning_annotation": [
+      {
+        "Categories": "KIDDO",
+        "Words in Category": [
+          "BUDDY",
+          "CHAMP",
+          "SPORT",
+          "TIGER"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "UP FOR IT",
+        "Words in Category": [
+          "AMENABLE",
+          "DOWN",
+          "GAME",
+          "WILLING"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "BEGINNING WITH DOUBLE LETTERS",
+        "Words in Category": [
+          "AARDVARK",
+          "EERIE",
+          "LLAMA",
+          "OOZE"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "NICKNAMES FOR THE SEA, WITH \"THE\"",
+        "Words in Category": [
+          "BLUE",
+          "BRINY",
+          "DEEP",
+          "DRINK"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "DRINK",
+        "GAME",
+        "SPORT",
+        "WILLING"
+      ],
+      [
+        "AARDVARK",
+        "BUDDY",
+        "LLAMA",
+        "TIGER"
+      ],
+      [
+        "BLUE",
+        "BRINY",
+        "CHAMP",
+        "EERIE"
+      ],
+      [
+        "AMENABLE",
+        "DEEP",
+        "DOWN",
+        "OOZE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['FLOOR', 'STORY', 'DECK', 'SCREEN']\nCategory2: ['SPEAKER', 'PROJECTOR', 'SCREEN', 'MIRROR']\nCategory3: ['POST', 'STREAK', 'MOON', 'REEL']\nCategory4: ['LEVEL', 'EGG', 'GLOBE', 'TOILET PAPER']\n\nPlease give your final answer using the same structure.\n\nLet's start. The words are: ['DREAM', 'WATER', 'FROG', 'CLOUD', 'SNOW', 'FROG', 'FLY', 'W",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "DECK",
+        "FLOOR",
+        "SCREEN",
+        "STORY"
+      ],
+      [
+        "MIRROR",
+        "PROJECTOR",
+        "SCREEN",
+        "SPEAKER"
+      ],
+      [
+        "MOON",
+        "POST",
+        "REEL",
+        "STREAK"
+      ],
+      [
+        "EGG",
+        "GLOBE",
+        "LEVEL",
+        "TOILET PAPER"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['DAISY', 'GAFFE', 'JASMINE', 'PETUNIA']\nCategory2: ['BUZZ', 'FLUB', 'POLLINATE', 'YOGI']\nCategory3: ['BOO-BOO', 'DANCE', 'GOOF', 'MICKEY']\nCategory4: ['BABE', 'LOU', 'POPPY', 'STING']\n\nThe list of words is:\n['STAN', 'RABBIT', 'HARMONICA', 'FROG', 'BAGPIPE', 'ELEPHANT', 'RUSTY",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "DAISY",
+        "GAFFE",
+        "JASMINE",
+        "PETUNIA"
+      ],
+      [
+        "BUZZ",
+        "FLUB",
+        "POLLINATE",
+        "YOGI"
+      ],
+      [
+        "BOO",
+        "BOO",
+        "DANCE",
+        "GOOF",
+        "MICKEY"
+      ],
+      [
+        "BABE",
+        "LOU",
+        "POPPY",
+        "STING"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [BABY, CHANCE, GO, WONDER]\nCategory2: [BOARDWALK, ICE CUBE, MIDNIGHT, SISTER]\nCategory3: [FUTURE, POWDER, Q-TIP, ROYAL]\nCategory4: [COMMON, JAIL, SEA, SIN]\n\nNote: The words in the example above were used to create the categories, but the actual connections between the words and the categories are somewhat obscure. However, the connections are more intuitive in Category1 and Category2 than in Category3 and Category4.\n\nWords: ['SPRINKLE', 'BREATH",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "BABY",
+        "CHANCE",
+        "GO",
+        "WONDER"
+      ],
+      [
+        "BOARDWALK",
+        "ICE CUBE",
+        "MIDNIGHT",
+        "SISTER"
+      ],
+      [
+        "FUTURE",
+        "POWDER",
+        "ROYAL",
+        "TIP"
+      ],
+      [
+        "COMMON",
+        "JAIL",
+        "SEA",
+        "SIN"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['POACH', 'BUZZ', 'SCRAMBLE', 'AXE']\nCategory2: ['GIFT', 'SHRINK', 'RING', 'KICK']\nCategory3: ['BUBBLE', 'BOIL', 'DART', 'THRILL']\nCategory4: ['FRY', 'RUSH', 'HORSESHOE', 'BODY']\n\nWords: ['BAND', 'WIND', 'BELL', 'STORM', 'GOLD', 'CUT', 'LEAP', 'FLY', 'PEN', 'RIVER', 'CLOUD', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "WAYS TO PREPARE EGGS",
+        "Words in Category": [
+          "BOIL",
+          "FRY",
+          "POACH",
+          "SCRAMBLE"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "EXHILARATION",
+        "Words in Category": [
+          "BUZZ",
+          "KICK",
+          "RUSH",
+          "THRILL"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "THROWN IN TARGET GAMES",
+        "Words in Category": [
+          "AXE",
+          "DART",
+          "HORSESHOE",
+          "RING"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "___ WRAP",
+        "Words in Category": [
+          "BODY",
+          "BUBBLE",
+          "GIFT",
+          "SHRINK"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "AXE",
+        "BUZZ",
+        "POACH",
+        "SCRAMBLE"
+      ],
+      [
+        "GIFT",
+        "KICK",
+        "RING",
+        "SHRINK"
+      ],
+      [
+        "BOIL",
+        "BUBBLE",
+        "DART",
+        "THRILL"
+      ],
+      [
+        "BODY",
+        "FRY",
+        "HORSESHOE",
+        "RUSH"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [PAL, WOK, CHUM, PUMP]\nCategory2: [MARY JANE, HERB, GRASS, SKILLET]\nCategory3: [SLIDE, CROCK, MATE, CLOG]\nCategory4: [WEED, POT, WEDGE, BUD]\n\nToday's NYT Connections game:\nWords: ['WATER', 'FIRE', 'ICE', 'EARTH', 'BRAIN', 'HEART', 'LUNGS', 'KIDNEY', 'SPINE', 'SKULL', 'RIB', 'COLON', 'PANCREAS",
+    "reasoning_annotation": [
+      {
+        "Categories": "FRIEND",
+        "Words in Category": [
+          "BUD",
+          "CHUM",
+          "MATE",
+          "PAL"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "COOKWEAR",
+        "Words in Category": [
+          "CROCK",
+          "POT",
+          "SKILLET",
+          "WOK"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "SHOES",
+        "Words in Category": [
+          "CLOG",
+          "PUMP",
+          "SLIDE",
+          "WEDGE"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "SLANG FOR CANNABIS",
+        "Words in Category": [
+          "GRASS",
+          "HERB",
+          "MARY JANE",
+          "WEED"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CHUM",
+        "PAL",
+        "PUMP",
+        "WOK"
+      ],
+      [
+        "GRASS",
+        "HERB",
+        "MARY JANE",
+        "SKILLET"
+      ],
+      [
+        "CLOG",
+        "CROCK",
+        "MATE",
+        "SLIDE"
+      ],
+      [
+        "BUD",
+        "POT",
+        "WEDGE",
+        "WEED"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['METER', 'MONTH', 'CLOCK', 'TIME']\nCategory2: ['DONUT', 'CATCH', 'TAG', 'BEAT']\nCategory3: ['INCH', 'PADDLE', 'REGISTER', 'TIRED']\nCategory4: ['JUROR', 'NOTICE', 'DAYS', 'RHYTHM']\n\nWords: ['FROG', 'SPATULA', 'LAMB', 'WATER', 'TUNA', 'EGG', 'FROG', 'SPATULA', 'LAMB', 'WATER', 'TUNA",
+    "reasoning_annotation": [
+      {
+        "Categories": "PERCEIVE",
+        "Words in Category": [
+          "CATCH",
+          "CLOCK",
+          "NOTICE",
+          "REGISTER"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "CADENCE",
+        "Words in Category": [
+          "BEAT",
+          "METER",
+          "RHYTHM",
+          "TIME"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "ONE IN A GROUP OF TWELVE",
+        "Words in Category": [
+          "DONUT",
+          "INCH",
+          "JUROR",
+          "MONTH"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "DOG ___",
+        "Words in Category": [
+          "DAYS",
+          "PADDLE",
+          "TAG",
+          "TIRED"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CLOCK",
+        "METER",
+        "MONTH",
+        "TIME"
+      ],
+      [
+        "BEAT",
+        "CATCH",
+        "DONUT",
+        "TAG"
+      ],
+      [
+        "INCH",
+        "PADDLE",
+        "REGISTER",
+        "TIRED"
+      ],
+      [
+        "DAYS",
+        "JUROR",
+        "NOTICE",
+        "RHYTHM"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['TRIM', 'FRILL', 'FRINGE', 'BORDER']\nCategory2: ['BEAN', 'CHEESE', 'NEAT', 'DRY']\nCategory3: ['WAX', 'BIKINI', 'SWELL', 'GROW']\nCategory4: ['MOUNT', 'STRAIGHT', 'VIRGIN', 'THEORY']\n\nNote: The categories are not in any particular order.\n\nHere is today's example with the list of words:\nWords: ['LUMBER', 'TREASURE', 'STORM', 'SHIP', 'ANCHOR', 'T",
+    "reasoning_annotation": [
+      {
+        "Categories": "DECORATIVE EDGE",
+        "Words in Category": [
+          "BORDER",
+          "FRILL",
+          "FRINGE",
+          "TRIM"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "INCREASE, IN A WAY",
+        "Words in Category": [
+          "GROW",
+          "MOUNT",
+          "SWELL",
+          "WAX"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "SPECIFICATIONS FOR A BARTENDER",
+        "Words in Category": [
+          "DRY",
+          "NEAT",
+          "STRAIGHT",
+          "VIRGIN"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "STRING ___",
+        "Words in Category": [
+          "BEAN",
+          "BIKINI",
+          "CHEESE",
+          "THEORY"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BEAN",
+        "CHEESE",
+        "DRY",
+        "NEAT"
+      ],
+      [
+        "BIKINI",
+        "GROW",
+        "SWELL",
+        "WAX"
+      ],
+      [
+        "MOUNT",
+        "STRAIGHT",
+        "THEORY",
+        "VIRGIN"
+      ]
+    ],
+    "count_incorrect_inference_results": 3
+  },
+  {
+    "new_token_prediction": "Category1: [VOYAGER, MARCO POLO, PIONEER, GALILEO]\nCategory2: [MASTERMIND, DESIGNER, ENGINEER, VIKING]\nCategory3: [HATCH, TAG, BINGO, UNO]\nCategory4: [LUXURY, CONCOCT, DESINGER, HAUTE]\n\nNote: This example was solved by me, and I used my own reasoning to find the connections. Do not copy from this example. You must use your own logic and reasoning to solve the game.\n\nWords: ['BORDER', 'FRONTIER', 'OUT",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "GALILEO",
+        "MARCO POLO",
+        "PIONEER",
+        "VOYAGER"
+      ],
+      [
+        "DESIGNER",
+        "ENGINEER",
+        "MASTERMIND",
+        "VIKING"
+      ],
+      [
+        "BINGO",
+        "HATCH",
+        "TAG",
+        "UNO"
+      ],
+      [
+        "CONCOCT",
+        "DESINGER",
+        "HAUTE",
+        "LUXURY"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['BITTER', 'SWEET', 'SALTY', 'PEPPER']\nCategory2: ['PLYWOOD', 'COUCH', 'CAKE', 'HOT']\nCategory3: ['SCATTER', 'SPRINKLE', 'STREW', 'UPSET']\nCategory4: ['BAKED', 'EARTH', 'ONION', 'SORE']\n\nExplanation:\nCategory 1: Words that describe taste (BITTER, SWEET, SALTY, PEPPER)\nCategory 2: Words that describe a food item or a surface (PLYWOOD, COUCH, CAKE",
+    "reasoning_annotation": [
+      {
+        "Categories": "FEELING SOME TYPE OF WAY",
+        "Words in Category": [
+          "BITTER",
+          "SALTY",
+          "SORE",
+          "UPSET"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "THROW HERE AND THERE",
+        "Words in Category": [
+          "PEPPER",
+          "SCATTER",
+          "SPRINKLE",
+          "STREW"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "THINGS WITH LAYERS",
+        "Words in Category": [
+          "CAKE",
+          "EARTH",
+          "ONION",
+          "PLYWOOD"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "___ POTATO",
+        "Words in Category": [
+          "BAKED",
+          "COUCH",
+          "HOT",
+          "SWEET"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BITTER",
+        "PEPPER",
+        "SALTY",
+        "SWEET"
+      ],
+      [
+        "CAKE",
+        "COUCH",
+        "HOT",
+        "PLYWOOD"
+      ],
+      [
+        "SCATTER",
+        "SPRINKLE",
+        "STREW",
+        "UPSET"
+      ],
+      [
+        "BAKED",
+        "EARTH",
+        "ONION",
+        "SORE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['TEXT', 'WRITING', 'PASTE', 'COPY'] Category2: ['CARAT', 'OK', 'CUT', 'CLARITY'] Category3: ['LIST', 'WORDS', 'AD",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "COPY",
+        "PASTE",
+        "TEXT",
+        "WRITING"
+      ],
+      [
+        "CARAT",
+        "CLARITY",
+        "CUT",
+        "OK"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['CRUSH', 'TRASH', 'ROUT', 'SLATE']\nCategory2: ['LIQUID', 'LEAST', 'GAS', 'PLASMA']\nCategory3: ['SHELLAC', 'COPY', 'STALE', 'PASTE']\nCategory4: ['TESLA', 'CUT', 'UNDO', 'SOLID']\n\nWords: ['SAND', 'SNOW', 'GRAVEL', 'PEBBLE', 'FOUNTAIN', 'SPRINKLER', 'IRRIGATION', 'LAVATORY', 'POND', 'WATERFALL', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "STATES OF MATTER",
+        "Words in Category": [
+          "GAS",
+          "LIQUID",
+          "PLASMA",
+          "SOLID"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "EDIT MENU COMMANDS",
+        "Words in Category": [
+          "COPY",
+          "CUT",
+          "PASTE",
+          "UNDO"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "DEFEAT BADLY",
+        "Words in Category": [
+          "CRUSH",
+          "ROUT",
+          "SHELLAC",
+          "TRASH"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "ANAGRAMS",
+        "Words in Category": [
+          "LEAST",
+          "SLATE",
+          "STALE",
+          "TESLA"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CRUSH",
+        "ROUT",
+        "SLATE",
+        "TRASH"
+      ],
+      [
+        "GAS",
+        "LEAST",
+        "LIQUID",
+        "PLASMA"
+      ],
+      [
+        "COPY",
+        "PASTE",
+        "SHELLAC",
+        "STALE"
+      ],
+      [
+        "CUT",
+        "SOLID",
+        "TESLA",
+        "UNDO"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['REVIEW', 'COACH', 'PREMIERE', 'PREMIUM']\nCategory2: ['REDUCE', 'LESSEN', 'SHRINK', 'CONTRACT']\nCategory3: ['PILOT', 'BUSINESS', 'SCREEN', 'CHECK']\nCategory4: ['FINALE', 'FIRST', 'SPECIAL', 'VET']\n\nLet's solve the example given to you and then solve today's NYT Connections game with the following list of words:\nWords: ['WATER', 'FIRE', 'EARTH', 'AIR', 'PLANE', 'BOAT', 'SHIP',",
+    "reasoning_annotation": [
+      {
+        "Categories": "GET SMALLER",
+        "Words in Category": [
+          "CONTRACT",
+          "LESSEN",
+          "REDUCE",
+          "SHRINK"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "AIRLINE CLASSES",
+        "Words in Category": [
+          "BUSINESS",
+          "COACH",
+          "FIRST",
+          "PREMIUM"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "EXAMINE, AS AN APPLICANT",
+        "Words in Category": [
+          "CHECK",
+          "REVIEW",
+          "SCREEN",
+          "VET"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "NOTABLE TV EPISODES",
+        "Words in Category": [
+          "FINALE",
+          "PILOT",
+          "PREMIERE",
+          "SPECIAL"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "COACH",
+        "PREMIERE",
+        "PREMIUM",
+        "REVIEW"
+      ],
+      [
+        "BUSINESS",
+        "CHECK",
+        "PILOT",
+        "SCREEN"
+      ],
+      [
+        "FINALE",
+        "FIRST",
+        "SPECIAL",
+        "VET"
+      ]
+    ],
+    "count_incorrect_inference_results": 3
+  },
+  {
+    "new_token_prediction": "Category1: [PACER, CLIP, SPUR, GO]\nCategory2: [PROMPTER, CLIPPER, MOVE, COMMUTE]\nCategory3: [RATE, SPEED, VISION, PACE]\nCategory4: [ROCKET, HURRY, MEDICINE, FASTER]\n\nNow it's your turn. Solve today's NYT Connections game with the following list of words:\nWords: ['BRAID', 'CHRONOLOGY', 'PLAIT', 'SCHEDULE', 'TAPE', 'TIE', 'STRAND', 'SCROLL', 'STRING', 'P",
+    "reasoning_annotation": [
+      {
+        "Categories": "HOW FAST SOMETHING IS GOING",
+        "Words in Category": [
+          "CLIP",
+          "PACE",
+          "RATE",
+          "SPEED"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "\"STEP ON IT!\"",
+        "Words in Category": [
+          "FASTER",
+          "GO",
+          "HURRY",
+          "MOVE"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "N.B.A. TEAM PLAYER",
+        "Words in Category": [
+          "CLIPPER",
+          "PACER",
+          "ROCKET",
+          "SPUR"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "TELE___",
+        "Words in Category": [
+          "COMMUTE",
+          "MEDICINE",
+          "PROMPTER",
+          "VISION"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CLIP",
+        "GO",
+        "PACER",
+        "SPUR"
+      ],
+      [
+        "CLIPPER",
+        "COMMUTE",
+        "MOVE",
+        "PROMPTER"
+      ],
+      [
+        "PACE",
+        "RATE",
+        "SPEED",
+        "VISION"
+      ],
+      [
+        "FASTER",
+        "HURRY",
+        "MEDICINE",
+        "ROCKET"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['HAMMER', 'SAW', 'WRENCH', 'LEVEL']\nCategory2: ['FIND', 'PRINT', 'COPY', 'SAVE']\nCategory3: ['FILE', 'JERK', 'YANK', 'TUG']\nCategory4: ['CHARLOTTE', 'BEETHOVEN', 'WILLY', 'BABE']\n\nNote: The words in each category are not in any particular order. Also, the words in the same category are not necessarily synonyms.\n\nHere is the list of words for today's game:\n['WATER', 'FIRE', 'EARTH',",
+    "reasoning_annotation": [
+      {
+        "Categories": "TOOLS",
+        "Words in Category": [
+          "FILE",
+          "HAMMER",
+          "LEVEL",
+          "SAW"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "PULL",
+        "Words in Category": [
+          "JERK",
+          "TUG",
+          "WRENCH",
+          "YANK"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "SHORTCUT COMMANDS",
+        "Words in Category": [
+          "COPY",
+          "FIND",
+          "PRINT",
+          "SAVE"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "TITLE MOVIE ANIMALS",
+        "Words in Category": [
+          "BABE",
+          "BEETHOVEN",
+          "CHARLOTTE",
+          "WILLY"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "HAMMER",
+        "LEVEL",
+        "SAW",
+        "WRENCH"
+      ],
+      [
+        "FILE",
+        "JERK",
+        "TUG",
+        "YANK"
+      ]
+    ],
+    "count_incorrect_inference_results": 2
+  },
+  {
+    "new_token_prediction": "Category1: ['PROMPT', 'PROVOKE', 'INSPIRE', 'NETTLE']\nCategory2: ['SOAP', 'LOTION', 'INCENSE', 'CANDLE']\nCategory3: ['MADDEN', 'INSULT', 'HALO', 'GENERATE']\nCategory4: ['CIVILIZATION', 'WASP', 'JELLYFISH', 'METROID']\n\nNow, let's solve today's NYT Connections game.\nWords: ['FABLE', 'MOTIF', 'LEGEND', 'MYTH', 'POEM', 'SONG', 'VERSE', 'BALL",
+    "reasoning_annotation": [
+      {
+        "Categories": "BRING ABOUT",
+        "Words in Category": [
+          "GENERATE",
+          "INSPIRE",
+          "PROMPT",
+          "PROVOKE"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "THINGS THAT ARE OFTEN SCENTED",
+        "Words in Category": [
+          "CANDLE",
+          "INCENSE",
+          "LOTION",
+          "SOAP"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "THINGS THAT MIGHT STING",
+        "Words in Category": [
+          "INSULT",
+          "JELLYFISH",
+          "NETTLE",
+          "WASP"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "VIDEO GAME FRANCHISES",
+        "Words in Category": [
+          "CIVILIZATION",
+          "HALO",
+          "MADDEN",
+          "METROID"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "INSPIRE",
+        "NETTLE",
+        "PROMPT",
+        "PROVOKE"
+      ],
+      [
+        "GENERATE",
+        "HALO",
+        "INSULT",
+        "MADDEN"
+      ],
+      [
+        "CIVILIZATION",
+        "JELLYFISH",
+        "METROID",
+        "WASP"
+      ]
+    ],
+    "count_incorrect_inference_results": 3
+  },
+  {
+    "new_token_prediction": "Category1: [BALLOON, STREAMER, CONFETTI, GARLAND]\nCategory2: [FRESH, ORIGINAL, CREATIVE, SECURE]\nCategory3: [MODEL, BOOK, RESERVE, NOVEL]\nCategory4: [CHARTER, INFLUENCER, AMBASSADOR, BANNER]\n\nHere are the instructions for how to play this game:\nFind groups of four items that share something in common.\nCategory Examples:\nFISH: Bass, Flounder, Salmon, Trout\nFIRE ___: Ant, Drill, Island, Opal\nCategories will always be more specific than '",
+    "reasoning_annotation": [
+      {
+        "Categories": "INSPIRED",
+        "Words in Category": [
+          "CREATIVE",
+          "FRESH",
+          "NOVEL",
+          "ORIGINAL"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "PROCURE IN ADVANCE",
+        "Words in Category": [
+          "BOOK",
+          "CHARTER",
+          "RESERVE",
+          "SECURE"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "BIT OF PARTY DECORATION",
+        "Words in Category": [
+          "BALLOON",
+          "BANNER",
+          "CONFETTI",
+          "GARLAND"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "ONLINE PERSONALITY",
+        "Words in Category": [
+          "AMBASSADOR",
+          "INFLUENCER",
+          "MODEL",
+          "STREAMER"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BALLOON",
+        "CONFETTI",
+        "GARLAND",
+        "STREAMER"
+      ],
+      [
+        "CREATIVE",
+        "FRESH",
+        "ORIGINAL",
+        "SECURE"
+      ],
+      [
+        "BOOK",
+        "MODEL",
+        "NOVEL",
+        "RESERVE"
+      ],
+      [
+        "AMBASSADOR",
+        "BANNER",
+        "CHARTER",
+        "INFLUENCER"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [SIGNATURE, SYRUP, JAM, SAP]\nCategory2: [TIP, CUBE, GRAIN, POWDER]\nCategory3: [ROCK, GROOVE, SHRED, EXHAUST]\nCategory4: [TAX, TOTAL, DRAIN, EMPTY]\n\nHere are today's words:\n['NATION', 'WATER', 'HORSE', 'SAFETY', 'CLOUD', 'WATERFALL', 'FROG', 'NATIONWIDE', 'FROGLEG', 'WATERLOO', 'SAFETYNET',",
+    "reasoning_annotation": [
+      {
+        "Categories": "DEPLETE",
+        "Words in Category": [
+          "DRAIN",
+          "EMPTY",
+          "EXHAUST",
+          "SAP"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "PLAY MUSIC WITH PASSION",
+        "Words in Category": [
+          "GROOVE",
+          "JAM",
+          "ROCK",
+          "SHRED"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "WORDS ON A RESTAURANT RECEIPT",
+        "Words in Category": [
+          "TAX",
+          "TIP",
+          "TOTAL",
+          "SIGNATURE"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "FORMS OF SUGAR",
+        "Words in Category": [
+          "CUBE",
+          "GRAIN",
+          "POWDER",
+          "SYRUP"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "JAM",
+        "SAP",
+        "SIGNATURE",
+        "SYRUP"
+      ],
+      [
+        "CUBE",
+        "GRAIN",
+        "POWDER",
+        "TIP"
+      ],
+      [
+        "EXHAUST",
+        "GROOVE",
+        "ROCK",
+        "SHRED"
+      ],
+      [
+        "DRAIN",
+        "EMPTY",
+        "TAX",
+        "TOTAL"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['CROSSWALK', 'SNOWMAN', 'EXHIBIT', 'DISPLAY']\nCategory2: ['REFEREE', 'MISTLETOE', 'LIFESAVER', 'CANDY CANE']\nCategory3: ['CHEERIO', 'PRESENT', 'DONUT', 'BAGEL']\nCategory4: ['TIGER', 'SHOW', 'STOCKING', 'REINDEER']\n\nHere is the list of words for today's game:\nWords: ['CHART', 'MAP', 'DIARY', 'JOURNAL', 'CLOCK', 'TIMER',",
+    "reasoning_annotation": [
+      {
+        "Categories": "CHRISTMAS-RELATED",
+        "Words in Category": [
+          "MISTLETOE",
+          "REINDEER",
+          "SNOWMAN",
+          "STOCKING"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "MAKE PUBLIC",
+        "Words in Category": [
+          "DISPLAY",
+          "EXHIBIT",
+          "PRESENT",
+          "SHOW"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "TORUS-SHAPED FOOD",
+        "Words in Category": [
+          "BAGEL",
+          "CHEERIO",
+          "DONUT",
+          "LIFESAVER"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "THINGS WITH STRIPES",
+        "Words in Category": [
+          "CANDY CANE",
+          "CROSSWALK",
+          "REFEREE",
+          "TIGER"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CROSSWALK",
+        "DISPLAY",
+        "EXHIBIT",
+        "SNOWMAN"
+      ],
+      [
+        "CANDY CANE",
+        "LIFESAVER",
+        "MISTLETOE",
+        "REFEREE"
+      ],
+      [
+        "BAGEL",
+        "CHEERIO",
+        "DONUT",
+        "PRESENT"
+      ],
+      [
+        "REINDEER",
+        "SHOW",
+        "STOCKING",
+        "TIGER"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['FUND', 'CHEER', 'MOP', 'SCRUB']\nCategory2: ['RECORD', 'HOG', 'MAZE', 'LOG']\nCategory3: ['TANGLE', 'REGISTER', 'TRIMMER', 'WEED']\nCategory4: ['FRIEND', 'SHOCK', 'MANE', 'JOURNAL']\n\nToday's list of words:\n['CLOUD', 'FROG', 'WATER', 'WATERFALL', 'WATERWAY', 'FROGLEG', 'WATERMELON', 'WATERWHEEL', 'WATER",
+    "reasoning_annotation": [
+      {
+        "Categories": "CHRONICLE",
+        "Words in Category": [
+          "JOURNAL",
+          "LOG",
+          "RECORD",
+          "REGISTER"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "MESS OF HAIR",
+        "Words in Category": [
+          "MANE",
+          "MOP",
+          "SHOCK",
+          "TANGLE"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "TV SHOWS MINUS \"S\"",
+        "Words in Category": [
+          "CHEER",
+          "FRIEND",
+          "SCRUB",
+          "WEED"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "WORDS AFTER \"HEDGE\"",
+        "Words in Category": [
+          "FUND",
+          "HOG",
+          "MAZE",
+          "TRIMMER"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CHEER",
+        "FUND",
+        "MOP",
+        "SCRUB"
+      ],
+      [
+        "HOG",
+        "LOG",
+        "MAZE",
+        "RECORD"
+      ],
+      [
+        "REGISTER",
+        "TANGLE",
+        "TRIMMER",
+        "WEED"
+      ],
+      [
+        "FRIEND",
+        "JOURNAL",
+        "MANE",
+        "SHOCK"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['CHARACTER', 'INDIVIDUAL', 'PERSON', 'FIGURE']\nCategory2: ['IMAGINE', 'BOBA', 'CAT', 'CHEWIE']\nCategory3: ['EMPEROR', 'SUSPECT', 'HAWK', 'SOLO']\nCategory4: ['LITTER', 'PARTY', 'CORNER', 'THINK']\n\nLet's solve today's NYT Connections game with the following list of words:\n['ALPHABET', 'NUMBERS', 'SYLLABLE', 'MEASURE', 'CLOCK', 'METER', 'WEIGHT',",
+    "reasoning_annotation": [
+      {
+        "Categories": "PRESUME",
+        "Words in Category": [
+          "FIGURE",
+          "IMAGINE",
+          "SUSPECT",
+          "THINK"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "SOMEBODY",
+        "Words in Category": [
+          "CHARACTER",
+          "INDIVIDUAL",
+          "PARTY",
+          "PERSON"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "CHARACTERS IN \"THE EMPIRE STRIKES BACK,\" FAMILIARLY",
+        "Words in Category": [
+          "BOBA",
+          "CHEWIE",
+          "EMPEROR",
+          "SOLO"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "WORDS AFTER \"KITTY\"",
+        "Words in Category": [
+          "CAT",
+          "CORNER",
+          "HAWK",
+          "LITTER"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CHARACTER",
+        "FIGURE",
+        "INDIVIDUAL",
+        "PERSON"
+      ],
+      [
+        "BOBA",
+        "CAT",
+        "CHEWIE",
+        "IMAGINE"
+      ],
+      [
+        "EMPEROR",
+        "HAWK",
+        "SOLO",
+        "SUSPECT"
+      ],
+      [
+        "CORNER",
+        "LITTER",
+        "PARTY",
+        "THINK"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['CHA', 'IGUANA', 'WARRIOR', 'MONITOR']\nCategory2: ['FOREST', 'LOTUS', 'NAE', 'GO']\nCategory3: ['TREE', 'DESERT', 'GRASSLAND', 'CAN']\nCategory4: ['GECKO', 'COBRA', 'TUNDRA', 'CHAMELEON']\n\n### Step 1: Analyze the given words and identify any patterns or connections.\nThe given words are: ['CHA', 'IGUANA', 'WARRIOR', 'MONITOR', 'FOREST', 'LOTUS',",
+    "reasoning_annotation": [
+      {
+        "Categories": "BIOMES",
+        "Words in Category": [
+          "DESERT",
+          "FOREST",
+          "GRASSLAND",
+          "TUNDRA"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "LIZARDS",
+        "Words in Category": [
+          "CHAMELEON",
+          "GECKO",
+          "IGUANA",
+          "MONITOR"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "YOGA POSES",
+        "Words in Category": [
+          "COBRA",
+          "LOTUS",
+          "TREE",
+          "WARRIOR"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "DANCES WHEN DOUBLED",
+        "Words in Category": [
+          "CAN",
+          "CHA",
+          "GO",
+          "NAE"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CHA",
+        "IGUANA",
+        "MONITOR",
+        "WARRIOR"
+      ],
+      [
+        "FOREST",
+        "GO",
+        "LOTUS",
+        "NAE"
+      ],
+      [
+        "CAN",
+        "DESERT",
+        "GRASSLAND",
+        "TREE"
+      ],
+      [
+        "CHAMELEON",
+        "COBRA",
+        "GECKO",
+        "TUNDRA"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['ABC', 'GASP', 'RUM', 'HEAVE']\nCategory2: ['PUFF', 'BROAD', 'BLANKET', 'BOOT']\nCategory3: ['PICNIC', 'BREEZE', 'PANT', 'PIE']\nCategory4: ['GENERAL', 'UMBRELLA', 'ARS', 'BUT']\n\nNote: The categories are not the only thing that can be used to group the words. Other groupings like synonyms, antonyms, anagrams, prefixes, suffixes, word patterns, etc. can also be used. However, these groupings should",
+    "reasoning_annotation": [
+      {
+        "Categories": "BREATHE HARD",
+        "Words in Category": [
+          "GASP",
+          "HEAVE",
+          "PANT",
+          "PUFF"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "CATCHALL",
+        "Words in Category": [
+          "BLANKET",
+          "BROAD",
+          "GENERAL",
+          "UMBRELLA"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "METAPHORS FOR EASY THINGS",
+        "Words in Category": [
+          "ABC",
+          "BREEZE",
+          "PICNIC",
+          "PIE"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "SYNONYMS FOR REAR END MINUS LAST LETTER",
+        "Words in Category": [
+          "ARS",
+          "BOOT",
+          "BUT",
+          "RUM"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "ABC",
+        "GASP",
+        "HEAVE",
+        "RUM"
+      ],
+      [
+        "BLANKET",
+        "BOOT",
+        "BROAD",
+        "PUFF"
+      ],
+      [
+        "BREEZE",
+        "PANT",
+        "PICNIC",
+        "PIE"
+      ],
+      [
+        "ARS",
+        "BUT",
+        "GENERAL",
+        "UMBRELLA"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['GOOD', 'GOODNESS', 'POSSESSION', 'BELONGING']\nCategory2: ['BANJO', 'CARD', 'EFFECT', 'NOSE']\nCategory3: ['APPLE', 'BIRDS', 'BOY', 'WOW']\nCategory4: ['EXORCIST', 'HAUNTING', 'SHINING', 'MAN']\n\nWords: ['GALAXY', 'ECLIPSE', 'WATER', 'FLOOD', 'MOUNTAIN', 'WATERFALL', 'WATERMELON', 'WAVE', 'TIDE',",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "BELONGING",
+        "GOOD",
+        "GOODNESS",
+        "POSSESSION"
+      ],
+      [
+        "BANJO",
+        "CARD",
+        "EFFECT",
+        "NOSE"
+      ],
+      [
+        "APPLE",
+        "BIRDS",
+        "BOY",
+        "WOW"
+      ],
+      [
+        "EXORCIST",
+        "HAUNTING",
+        "MAN",
+        "SHINING"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [COACH, TEE, POLO, CROP]\nCategory2: [ROCKS, GLOVE, BALL, FILTER]\nCategory3: [GODIVA, PUMP, FLIP, TANK]\nCategory4: [MUSTANG, DRIVER, SCALE, ROTATE]\n\nToday's words:\n['DRAFT', 'SPEAK', 'LEAK', 'SLATE', 'WIRE', 'RIDE', 'LAKE', 'TRAP', 'WEED', 'SPIN', 'PIPE', 'PLOT', 'BRUSH', 'FIRE', 'SPILL",
+    "reasoning_annotation": [
+      {
+        "Categories": "WAYS TO TRANSFORM AN IMAGE",
+        "Words in Category": [
+          "CROP",
+          "FLIP",
+          "ROTATE",
+          "SCALE"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "THINGS USED IN GOLF",
+        "Words in Category": [
+          "BALL",
+          "DRIVER",
+          "GLOVE",
+          "TEE"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "AQUARIUM PURCHASES",
+        "Words in Category": [
+          "FILTER",
+          "PUMP",
+          "ROCKS",
+          "TANK"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "LOGOS WITH HORSES",
+        "Words in Category": [
+          "COACH",
+          "GODIVA",
+          "MUSTANG",
+          "POLO"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "COACH",
+        "CROP",
+        "POLO",
+        "TEE"
+      ],
+      [
+        "BALL",
+        "FILTER",
+        "GLOVE",
+        "ROCKS"
+      ],
+      [
+        "FLIP",
+        "GODIVA",
+        "PUMP",
+        "TANK"
+      ],
+      [
+        "DRIVER",
+        "MUSTANG",
+        "ROTATE",
+        "SCALE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "(Your answer)\nCategory1: [word1, word2, word3, word4]\nCategory2: [word5, word6, word7, word8]\nCategory3: [word9, word10, word11, word12]\nCategory4: [word13, word14, word15, word16]\n\n---\n\nWords: ['MALL', 'SWITCH', 'GYM', 'BUSINESS', 'PLANT', 'AGENT', 'ASSET', 'MOLE', 'TRADE', 'PACK', 'SCONCE', 'COMMERCE', 'RUG', 'MARKET', '",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [],
+      [],
+      [],
+      []
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['TRIAL', 'EXPLORATORY', 'PRELIMINARY', 'PAN']\nCategory2: ['JERSEY', 'PARKER', 'RABBIT', 'PILLOW']\nCategory3: ['MERRILY', 'SHORT', 'KINKY', 'SURLY']\nCategory4: ['PILOT', 'TESTY', 'PIPER', 'FIDDLER']\n\nNote: The words in the example answer are in the correct categories, but the categories themselves are not the best. This is just an example to help you understand the structure.\n\nHere is",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "EXPLORATORY",
+        "PAN",
+        "PRELIMINARY",
+        "TRIAL"
+      ],
+      [
+        "JERSEY",
+        "PARKER",
+        "PILLOW",
+        "RABBIT"
+      ],
+      [
+        "KINKY",
+        "MERRILY",
+        "SHORT",
+        "SURLY"
+      ],
+      [
+        "FIDDLER",
+        "PILOT",
+        "PIPER",
+        "TESTY"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "(Your answer)\n\nNote: You can use the example to understand the structure of the game, but you will be given a new set of words to solve. \n\nHere are the words for today's game:\n['VIOLET",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['GOAT', 'CHAMP', 'BEST', 'LEGEND']\nCategory2: ['NAVAL', 'SHIP', 'VESSEL', 'BARGE']\nCategory3: ['CRAFT', 'MUSSEL', 'ON', 'TOWARD']\nCategory4: ['HARE', 'I', 'CONCERNING', 'ABOUT']\n\nHere are the instructions for how to play this game:\nFind groups of four items that share something in common.\n\nWords: ['DART', 'HEM', 'PLEAT', 'SEAM', 'CAN', 'CURE', 'DRY', 'FREE",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "BEST",
+        "CHAMP",
+        "GOAT",
+        "LEGEND"
+      ],
+      [
+        "BARGE",
+        "NAVAL",
+        "SHIP",
+        "VESSEL"
+      ],
+      [
+        "CRAFT",
+        "MUSSEL",
+        "ON",
+        "TOWARD"
+      ],
+      [
+        "ABOUT",
+        "CONCERNING",
+        "HARE"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['LACE', 'EYELET', 'CHIFFON', 'SATIN']\nCategory2: ['SPEECH', 'TONGUE', 'SETTLE', 'B",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "CHIFFON",
+        "EYELET",
+        "LACE",
+        "SATIN"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [WINDY, DIVE, SPOUT, RELAX]\nCategory2: [EASY, CHILL, SING, QUIET]\nCategory3: [ENOUGH, BREACH, SPOUT, COUGH]\nCategory4: [BUG, SIN, COLD, MAGIC]\n\nNote: The above example is not a real game but a demonstration of how the game is played.\n\nWords: ['FILM', 'FILMGOER', 'FILMGOING', 'FILMMAKER', 'FILMSTRIP', 'FILMROLE', 'F",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "DIVE",
+        "RELAX",
+        "SPOUT",
+        "WINDY"
+      ],
+      [
+        "CHILL",
+        "EASY",
+        "QUIET",
+        "SING"
+      ],
+      [
+        "BREACH",
+        "COUGH",
+        "ENOUGH",
+        "SPOUT"
+      ],
+      [
+        "BUG",
+        "COLD",
+        "MAGIC",
+        "SIN"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['AMP', 'TIE', 'HEARD', 'FIRE']\nCategory2: ['WATER', 'AUDITORY', 'CABLE', 'HITCH']\nCategory3: ['LINK', 'HYPE', 'SONIC', 'ELECTRIC']\nCategory4: ['COUPLE', 'GAS', 'PUMP', 'ACOUSTIC']\n\nWords: ['BRIDLE', 'BARN', 'FARM', 'STABLE', 'FENCE', 'FARMER', 'RANCH', 'HORSE', 'PASTURE', 'CORRAL', 'RIDER",
+    "reasoning_annotation": [
+      {
+        "Categories": "MONTHLY BILLS",
+        "Words in Category": [
+          "CABLE",
+          "ELECTRIC",
+          "GAS",
+          "WATER"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "RELATED TO SOUND/HEARING",
+        "Words in Category": [
+          "ACOUSTIC",
+          "AUDITORY",
+          "HEARD",
+          "SONIC"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "CONNECT",
+        "Words in Category": [
+          "COUPLE",
+          "HITCH",
+          "LINK",
+          "TIE"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "EXCITE, WITH \"UP\"",
+        "Words in Category": [
+          "AMP",
+          "FIRE",
+          "HYPE",
+          "PUMP"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "AMP",
+        "FIRE",
+        "HEARD",
+        "TIE"
+      ],
+      [
+        "AUDITORY",
+        "CABLE",
+        "HITCH",
+        "WATER"
+      ],
+      [
+        "ELECTRIC",
+        "HYPE",
+        "LINK",
+        "SONIC"
+      ],
+      [
+        "ACOUSTIC",
+        "COUPLE",
+        "GAS",
+        "PUMP"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [POX, PUZZLE, STUMP, JINX]\nCategory2: [CORE, HEX, GATE, REX]\nCategory3: [BUZZ, HAMM, PILLED, SLINKY]\nCategory4: [MANIA, PERPLEX, SPELL, VEX]\n\nWords: ['PENCIL', 'STRAW', 'STRAWBERRY', 'CUPCAKE', 'CAKE', 'DONUT', 'ECLAIR', 'ICECREAM', 'MOCHA', 'MUFFIN', 'TART', 'TARTAN', 'WAFFLE",
+    "reasoning_annotation": [
+      {
+        "Categories": "BAFFLE",
+        "Words in Category": [
+          "PERPLEX",
+          "PUZZLE",
+          "STUMP",
+          "VEX"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "CURSE",
+        "Words in Category": [
+          "HEX",
+          "JINX",
+          "POX",
+          "SPELL"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "\"TOY STORY\" CHARACTERS, FAMILIARLY",
+        "Words in Category": [
+          "BUZZ",
+          "HAMM",
+          "REX",
+          "SLINKY"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "COLLOQUIAL SUFFIXES",
+        "Words in Category": [
+          "CORE",
+          "GATE",
+          "MANIA",
+          "PILLED"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "JINX",
+        "POX",
+        "PUZZLE",
+        "STUMP"
+      ],
+      [
+        "CORE",
+        "GATE",
+        "HEX",
+        "REX"
+      ],
+      [
+        "BUZZ",
+        "HAMM",
+        "PILLED",
+        "SLINKY"
+      ],
+      [
+        "MANIA",
+        "PERPLEX",
+        "SPELL",
+        "VEX"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [BOUNCE, COIL, CARD, COUNT]\nCategory2: [EPISODE, SEASON, EVENT, BILL]\nCategory3: [CATALOG, LETTER, AMOUNT, TOTAL]\nCategory4: [NUMBER, AFFAIR, GEYSER, MATTER]\n\nToday's words: ['CARET', 'RAKE', 'NEEDLE', 'STITCH', 'SPILL', 'WASTE', 'FIBER', 'WEAVE', 'TELESCOPE', 'SCOPE', 'FIBEROPTIC', 'THREAD', 'YARN', 'STRING', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "QUANTITY",
+        "Words in Category": [
+          "AMOUNT",
+          "COUNT",
+          "NUMBER",
+          "TOTAL"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "INCIDENT",
+        "Words in Category": [
+          "AFFAIR",
+          "EPISODE",
+          "EVENT",
+          "MATTER"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "THINGS RECEIVED IN THE MAIL",
+        "Words in Category": [
+          "BILL",
+          "CARD",
+          "CATALOG",
+          "LETTER"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "WHAT \"SPRING\" MIGHT REFER TO",
+        "Words in Category": [
+          "BOUNCE",
+          "COIL",
+          "GEYSER",
+          "SEASON"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BOUNCE",
+        "CARD",
+        "COIL",
+        "COUNT"
+      ],
+      [
+        "BILL",
+        "EPISODE",
+        "EVENT",
+        "SEASON"
+      ],
+      [
+        "AMOUNT",
+        "CATALOG",
+        "LETTER",
+        "TOTAL"
+      ],
+      [
+        "AFFAIR",
+        "GEYSER",
+        "MATTER",
+        "NUMBER"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "(Please answer in this format)\nCategory1: [word1, word2, word3, word4]\nCategory2: [word5, word6, word7, word8]\nCategory3: [word9, word10, word11, word12]\nCategory4: [word13, word14, word15, word16]\n\nWords: ['DRESS COAT', 'COIN TOSS', 'FICTION', 'COMETS', 'ASTEROIDS', 'CENTIPEDE', 'ROMANCE', 'COURT', 'PURSUE', 'INVENTION', 'CHARM', '",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [],
+      [],
+      [],
+      []
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Words that begin with \"S\": ['SUNRISE', 'SOS', 'SLEEP', 'STAY']\nThings that can be seen in the sky: ['DEW', '",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [MA, XI, DO, HE]\nCategory2: [NI, FE, ME, PA]\nCategory3: [CO, NA, PI, TI]\nCategory4: [MU, FA, LA, NU]\n\nToday's list of words:\n['BRA', 'CARE', 'CUT', 'FROG', 'GAS', 'HAIR', 'HORN', 'KNOT', 'LEAD', 'LION', 'LOOP', 'MEAT', 'MIST', 'MUTE', 'OIL', 'RIB', 'ROPE', 'SHARE', 'SL",
+    "reasoning_annotation": [
+      {
+        "Categories": "STATE ABBREVIATIONS",
+        "Words in Category": [
+          "CO",
+          "MA",
+          "ME",
+          "PA"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "MUSICAL NOTES",
+        "Words in Category": [
+          "DO",
+          "FA",
+          "LA",
+          "TI"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "GREEK LETTERS",
+        "Words in Category": [
+          "MU",
+          "NU",
+          "PI",
+          "XI"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "PERIODIC TABLE SYMBOLS",
+        "Words in Category": [
+          "FE",
+          "HE",
+          "NA",
+          "NI"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "DO",
+        "HE",
+        "MA",
+        "XI"
+      ],
+      [
+        "FE",
+        "ME",
+        "NI",
+        "PA"
+      ],
+      [
+        "CO",
+        "NA",
+        "PI",
+        "TI"
+      ],
+      [
+        "FA",
+        "LA",
+        "MU",
+        "NU"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['CILANTRO', 'SALSA', 'LIME', 'ONION']\nCategory2: ['PICO', 'KILO', 'MICRO', 'MEGA']\nCategory3: ['MINI', 'POODLE', 'PENCIL', 'FOOT']\nCategory4: ['FAITH', 'CAPITOL', 'MOLE', 'WRAP']\n\nToday's list:\nWords: ['ALOHA', 'SANDAL', 'SUN', 'WAVE', 'TAN', 'SURF', 'GALAXY', 'HAWAII', 'BE",
+    "reasoning_annotation": [
+      {
+        "Categories": "TACO TOPPINGS",
+        "Words in Category": [
+          "CILANTRO",
+          "LIME",
+          "ONION",
+          "SALSA"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "METRIC PREFIXES",
+        "Words in Category": [
+          "KILO",
+          "MEGA",
+          "MICRO",
+          "PICO"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "KINDS OF SKIRTS",
+        "Words in Category": [
+          "MINI",
+          "PENCIL",
+          "POODLE",
+          "WRAP"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "WORDS WITH \"HILL\"",
+        "Words in Category": [
+          "CAPITOL",
+          "FAITH",
+          "FOOT",
+          "MOLE"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "FOOT",
+        "MINI",
+        "PENCIL",
+        "POODLE"
+      ],
+      [
+        "CAPITOL",
+        "FAITH",
+        "MOLE",
+        "WRAP"
+      ]
+    ],
+    "count_incorrect_inference_results": 2
+  },
+  {
+    "new_token_prediction": "Category1: ['EEL', 'SALAMANDER', 'SLUG', 'EARTHWORM'] Category2: ['RAINDROP', 'WATERFALL', 'FIREFLY', 'CLOG'] Category3: ['GATECRASH', 'WINDMILL', 'CANAL', 'GLOWSTICK'] Category4: ['TULIP', 'AURORA', 'SKYDIVE', 'RADIUM']\n\nPlease provide your answer in the format above and explain your reasoning for each category. \n\nWords: ['VAN', 'WAGON', 'FERRY', 'L",
+    "reasoning_annotation": [
+      {
+        "Categories": "SLIMY ANIMALS",
+        "Words in Category": [
+          "EARTHWORM",
+          "EEL",
+          "SALAMANDER",
+          "SLUG"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "THINGS THAT LUMINESCE",
+        "Words in Category": [
+          "AURORA",
+          "FIREFLY",
+          "GLOWSTICK",
+          "RADIUM"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "DUTCH SYMBOLS",
+        "Words in Category": [
+          "CANAL",
+          "CLOG",
+          "TULIP",
+          "WINDMILL"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "ENDING WITH SYNONYMS FOR \"PLUNGE\"",
+        "Words in Category": [
+          "GATECRASH",
+          "RAINDROP",
+          "SKYDIVE",
+          "WATERFALL"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "CLOG",
+        "FIREFLY",
+        "RAINDROP",
+        "WATERFALL"
+      ],
+      [
+        "CANAL",
+        "GATECRASH",
+        "GLOWSTICK",
+        "WINDMILL"
+      ],
+      [
+        "AURORA",
+        "RADIUM",
+        "SKYDIVE",
+        "TULIP"
+      ]
+    ],
+    "count_incorrect_inference_results": 3
+  },
+  {
+    "new_token_prediction": "Category1: [SWING, GOLFER, COWBOY, SHEPHERD]\nCategory2: [RAM, CASK, TANK, JET]\nCategory3: [USHER, PENDULUM, DRUM, SALOON DOORS]\nCategory4: [CYLINDER, STEER, PILOT, RAVEN]\n\nExplanation: Category 1 is a group of words that can be related to a golf swing, a cowboy's horse swing, a shepherd's sheep swing, and a golfer's swing. Category 2 is a group of words that are all types of vehicles",
+    "reasoning_annotation": [
+      {
+        "Categories": "BARREL-SHAPED CONTAINER",
+        "Words in Category": [
+          "CASK",
+          "CYLINDER",
+          "DRUM",
+          "TANK"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "GUIDE",
+        "Words in Category": [
+          "PILOT",
+          "USHER",
+          "SHEPHERD",
+          "STEER"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "N.F.L. TEAM MEMBER",
+        "Words in Category": [
+          "COWBOY",
+          "JET",
+          "RAM",
+          "RAVEN"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "THINGS THAT SWING",
+        "Words in Category": [
+          "GOLFER",
+          "PENDULUM",
+          "SALOON DOORS",
+          "SWING"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "COWBOY",
+        "GOLFER",
+        "SHEPHERD",
+        "SWING"
+      ],
+      [
+        "CASK",
+        "JET",
+        "RAM",
+        "TANK"
+      ],
+      [
+        "DRUM",
+        "PENDULUM",
+        "SALOON DOORS",
+        "USHER"
+      ],
+      [
+        "CYLINDER",
+        "PILOT",
+        "RAVEN",
+        "STEER"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: ['BUTTON', 'BUCKLE', 'ZIP', 'CURL']\nCategory2: ['PLANK', 'LUNGE', 'PRESS', 'SQUAT']\nCategory3: ['KANGAROO', 'CRUNCH', 'SNAP', 'JACK']\nCategory4: ['NOTHING', 'NADA', 'OBVIOUS', 'PLANET']\n\nI will provide the solution to the problem. Please provide the answer in the required format.\n\nHere are the words: ['BAY', 'FJORD', 'INLET', 'STRAIT', 'PEN', 'CANAL', '",
+    "reasoning_annotation": [
+      {
+        "Categories": "FASTENING VERBS",
+        "Words in Category": [
+          "BUCKLE",
+          "BUTTON",
+          "SNAP",
+          "ZIP"
+        ],
+        "Complexity": 1
+      },
+      {
+        "Categories": "SLANG FOR ZERO",
+        "Words in Category": [
+          "JACK",
+          "NADA",
+          "NOTHING",
+          "SQUAT"
+        ],
+        "Complexity": 2
+      },
+      {
+        "Categories": "GYM EXERCISES",
+        "Words in Category": [
+          "CURL",
+          "LUNGE",
+          "PLANK",
+          "PRESS"
+        ],
+        "Complexity": 3
+      },
+      {
+        "Categories": "\"CAPTAINS\"",
+        "Words in Category": [
+          "CRUNCH",
+          "KANGAROO",
+          "OBVIOUS",
+          "PLANET"
+        ],
+        "Complexity": 4
+      }
+    ],
+    "incorrect_inference_results": [
+      [
+        "BUCKLE",
+        "BUTTON",
+        "CURL",
+        "ZIP"
+      ],
+      [
+        "LUNGE",
+        "PLANK",
+        "PRESS",
+        "SQUAT"
+      ],
+      [
+        "CRUNCH",
+        "JACK",
+        "KANGAROO",
+        "SNAP"
+      ],
+      [
+        "NADA",
+        "NOTHING",
+        "OBVIOUS",
+        "PLANET"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  },
+  {
+    "new_token_prediction": "Category1: [SATCHEL, BLANKET, TOP, BASKET]\nCategory2: [ECLIPSE, COOLER, BOMBER, FEDORA]\nCategory3: [UTENSILS, BASKET, PAGAN, VIXEN]\nCategory4: [SMARTER, SURPASS, WIDEN, WHIP]\n\nNow it's your turn to solve today's NYT Connections game. Here are the instructions for how to play this game:\n\nFind groups of four items that share something in common.\n\nCategory Examples:\nFISH: Bass, Flounder, Salmon, Trout\nF",
+    "reasoning_annotation": "MATCHING GOLD PUZZLE NOT FOUND OR INVALID PREDICTION FORMAT",
+    "incorrect_inference_results": [
+      [
+        "BASKET",
+        "BLANKET",
+        "SATCHEL",
+        "TOP"
+      ],
+      [
+        "BOMBER",
+        "COOLER",
+        "ECLIPSE",
+        "FEDORA"
+      ],
+      [
+        "BASKET",
+        "PAGAN",
+        "UTENSILS",
+        "VIXEN"
+      ],
+      [
+        "SMARTER",
+        "SURPASS",
+        "WHIP",
+        "WIDEN"
+      ]
+    ],
+    "count_incorrect_inference_results": 4
+  }
+]

@@ -78,7 +78,8 @@ def make_ds(file, save_to_disk=True):
         ds.save_to_disk("connections_ds")
     return ds
 
-def main(file="output2.json"):
+
+def main(file="shuffledJSON.json"):
     ds = make_ds(file)
 
     for i in range(5):
