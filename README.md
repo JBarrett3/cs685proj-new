@@ -23,7 +23,7 @@ We believe that these folders are all quite self-explanatory and note that the c
 This folder contains the raw NYT games file (`raw.txt`), which is converted into a JSON format (`originalJSON.json`) by **make_json.py**. The data from `raw.txt` are also shuffled and saved as `shuffledJSON` by **make_shuffled_json.py**. The shuffled data is further processed into a `connections_ds` format that can be used for the model by **make_ds.py**.
 
 ### `grpo`
-\todo{Michael on GRPO}
+This folder contains the fine-tuning process (`finetune.py`) and the inference process (`inference.py`) for Group Relative Policy Optimization (GRPO). Plotting rewards across epochs is in (`plot_rewards.py`).
 
 ### `inference`
 This is a folder with utiltiies to help us annotate the results of the model.
